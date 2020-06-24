@@ -1,0 +1,21 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:torch",
+		"minecraft:wall_torch",
+		"minecraft:cobweb",
+		"minecraft:vine",
+		"minecraft:grass",
+		"minecraft:brown_mushroom",
+		"minecraft:red_mushroom",
+		"minecraft:snow",
+		"minecraft:fire",
+		"minecraft:air",
+		"#minecraft:saplings",
+		"#minecraft:carpets",
+		"#minecraft:banners",
+		"#minecraft:signs",
+		"#minecraft:crops",
+		"#minecraft:flowers"
+	]
+}

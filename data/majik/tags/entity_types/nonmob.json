@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:boat",
+		"minecraft:item",
+		"minecraft:snowball",
+		"minecraft:fireball",
+		"minecraft:small_fireball",
+		"minecraft:lightning_bolt",
+		"#minecraft:arrows",
+		"minecraft:potion",
+		"minecraft:falling_block",
+		"minecraft:armor_stand",
+		"minecraft:firework_rocket",
+		"minecraft:painting",
+		"minecraft:item_frame",
+		"minecraft:leash_knot",
+		"minecraft:area_effect_cloud",
+		"minecraft:experience_orb",
+		"minecraft:experience_bottle"
+	]
+}

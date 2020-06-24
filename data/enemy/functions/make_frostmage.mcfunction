@@ -1,0 +1,1 @@
+summon stray ~ ~ ~ {PersistenceRequired:0b,HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:power",lvl:1}]}},{id:"minecraft:packed_ice",Count:1b}],HandDropChances:[0.01f,1.0f],ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1b,tag:{Enchantments:[{id:"minecraft:protection",lvl:2}]}}],Tags:["FrostMage","CanAge"]}

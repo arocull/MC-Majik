@@ -1,0 +1,16 @@
+{
+	"values": [
+		"majik:set_bars",
+		"majik:spell_tags",
+		
+		"enemy:tick_ai",
+		"mflux:tick_flux",
+
+		"majik:bound_weapons",
+		"majik:tick",
+		
+		"majik:craft_compendium",
+		"majik:craft_helm_of_sensing",
+		"majik:craft_spells"
+	]
+}

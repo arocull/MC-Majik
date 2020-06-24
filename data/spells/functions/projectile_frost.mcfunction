@@ -1,0 +1,1 @@
+execute as @e[tag=spell_projectile_frost] at @s run particle minecraft:firework ~ ~ ~ .05 .05 .05 0 3 normal

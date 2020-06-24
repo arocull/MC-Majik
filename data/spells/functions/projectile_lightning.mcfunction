@@ -1,0 +1,1 @@
+execute as @e[tag=spell_projectile_lightning] at @s run particle minecraft:end_rod ~ ~ ~ .3 .3 .3 .1 10 normal
