@@ -11,6 +11,8 @@
 		"minecraft:snow",
 		"minecraft:fire",
 		"minecraft:air",
+		"minecraft:cave_air",
+		"minecraft:void_air",
 		"#minecraft:saplings",
 		"#minecraft:carpets",
 		"#minecraft:banners",

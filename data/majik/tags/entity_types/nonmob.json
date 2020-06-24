@@ -3,11 +3,7 @@
 	"values": [
 		"minecraft:boat",
 		"minecraft:item",
-		"minecraft:snowball",
-		"minecraft:fireball",
-		"minecraft:small_fireball",
 		"minecraft:lightning_bolt",
-		"#minecraft:arrows",
 		"minecraft:potion",
 		"minecraft:falling_block",
 		"minecraft:armor_stand",
@@ -17,6 +13,8 @@
 		"minecraft:leash_knot",
 		"minecraft:area_effect_cloud",
 		"minecraft:experience_orb",
-		"minecraft:experience_bottle"
+		"minecraft:experience_bottle",
+		"minecraft:shulker_bullet",
+		"#minecraft:impact_projectiles"
 	]
 }

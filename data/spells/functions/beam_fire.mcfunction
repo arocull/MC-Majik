@@ -13,13 +13,10 @@ execute unless block ~ ~-1 ~ snow run setblock ~ ~ ~ air
 particle flame ~ ~ ~ .25 .25 .25 .02 10 normal
 playsound entity.blaze.shoot player @a ~ ~ ~ .5 2
 
-execute as @s positioned ^ ^ ^1 if block ~ ~ ~ fire if score @s beam_length matches ..25 run function spells:beam_fire
-execute as @s positioned ^ ^ ^1 if block ~ ~ ~ air if score @s beam_length matches ..25 run function spells:beam_fire
-execute as @s positioned ^ ^ ^1 if block ~ ~ ~ grass if score @s beam_length matches ..25 run function spells:beam_fire
-execute as @s positioned ^ ^ ^1 if block ~ ~ ~ torch if score @s beam_length matches ..25 run function spells:beam_fire
-execute as @s positioned ^ ^ ^1 if block ~ ~ ~ snow[layers=1] if score @s beam_length matches ..25 run function spells:beam_fire
+## Continue beam if next point is a non-solid block
+execute as @s positioned ^ ^ ^1 if block ~ ~ ~ #majik:nonsolid if score @s beam_length matches ..25 run function spells:beam_fire
 
 ## Endpoint
-execute as @s positioned ^ ^ ^1 unless block ~ ~ ~ air unless block ~ ~ ~ fire unless block ~ ~ ~ grass unless block ~ ~ ~ torch unless block ~ ~ ~ snow[layers=1] run function spells:beam_fire_end
-execute as @s positioned ^ ^ ^1 unless block ~ ~ ~ air unless block ~ ~ ~ fire unless block ~ ~ ~ grass unless block ~ ~ ~ torch unless block ~ ~ ~ snow[layers=1] run playsound entity.blaze.hurt player @s ~ ~ ~ 1 1 1
+execute as @s positioned ^ ^ ^1 unless block ~ ~ ~ #majik:nonsolid run function spells:beam_fire_end
+execute as @s positioned ^ ^ ^1 unless block ~ ~ ~ #majik:nonsolid run playsound entity.blaze.hurt player @s ~ ~ ~ 1 1 1
 execute as @s if score @s beam_length matches 26 run function spells:beam_fire_end
