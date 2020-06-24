@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:potion",
+		"minecraft:falling_block",
+        "minecraft:tnt",
+        "minecraft:tnt_minecart",
+        "minecraft:shulker_bullet",
+        "minecraft:ender_pearl",
+        "minecraft:vex",
+		"#minecraft:impact_projectiles"
+	]
+}

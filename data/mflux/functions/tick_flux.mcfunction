@@ -31,6 +31,10 @@ execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ glass 
 ### Levitation
 execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ gold_block positioned ~-0.75 ~ ~-0.75 if entity @a[gamemode=!spectator,dx=0.5,dz=0.5,dy=10] run function mflux:levitate_players
 execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ gold_block positioned ~-1 ~ ~-1 run effect give @a[gamemode=!spectator,dx=1,dz=1,dy=12] minecraft:slow_falling 2 0 true
+### Monster Repulsion Field
+execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ emerald_block if entity @e[type=#majik:hostile,distance=..20] run function mflux:monster_repulsion
+### Projectile Repulsion Field
+execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ diamond_block if entity @e[type=#majik:projectile,distance=..8,nbt=!{inGround:1b}] run function mflux:projectile_repulsion
 ### Sun Altar
 execute as @e[tag=Conduit,scores={flux=..3,age=2}] at @s positioned ~ ~-1 ~ if block ~-1 ~ ~-1 lapis_block if block ~-1 ~ ~ gold_block if block ~-1 ~ ~1 lapis_block if block ~ ~ ~-1 gold_block if block ~ ~ ~ quartz_block if block ~ ~ ~1 gold_block if block ~1 ~ ~-1 lapis_block if block ~1 ~ ~ gold_block if block ~1 ~ ~1 lapis_block positioned ~ ~1 ~ if block ~-1 ~ ~-1 daylight_detector[inverted=false] if block ~-1 ~ ~1 daylight_detector[inverted=false] if block ~1 ~ ~-1 daylight_detector[inverted=false] if block ~1 ~ ~1 daylight_detector[inverted=false] run function mflux:sun_altar
 
