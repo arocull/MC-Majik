@@ -21,6 +21,15 @@ execute as @e[tag=Conduit,scores={age=2}] at @s if block ~ ~-1 ~ lapis_block as 
 execute as @e[tag=Conduit,scores={flux=1..}] at @s at @e[tag=Conduit,sort=random,distance=1..8,limit=1] if score @s flux > @e[tag=Conduit,sort=nearest,limit=1] flux run function mflux:transfer_flux
 
 
+## Tick Ambient Sounds
+execute as @e[tag=Conduit,scores={flux=1..}] run scoreboard players add @s xp_old 1
+
+execute as @e[tag=Conduit,scores={flux=1..,xp_old=240..}] at @s if block ~ ~-1 ~ emerald_block run playsound minecraft:block.beacon.ambient ambient @a[distance=..30] ~ ~ ~ 1 0.8 0.5
+execute as @e[tag=Conduit,scores={flux=1..,xp_old=10}] at @s if block ~ ~-1 ~ diamond_block run playsound minecraft:block.beacon.ambient ambient @a[distance=..20] ~ ~ ~ 0.7 1.5 0.1
+
+execute as @e[tag=Conduit] if score @s xp_old matches 240.. run scoreboard players set @s xp_old 0
+
+
 ## Perform functions
 ### Furnace
 execute as @e[tag=Conduit,scores={flux=1..}] at @s if block ~ ~-1 ~ furnace{Items:[{Slot:0b}],BurnTime:0s} run function mflux:fuel_furnace
@@ -33,8 +42,8 @@ execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ gold_b
 execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ gold_block positioned ~-1 ~ ~-1 run effect give @a[gamemode=!spectator,dx=1,dz=1,dy=12] minecraft:slow_falling 2 0 true
 ### Monster Repulsion Field
 execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ emerald_block if entity @e[type=#majik:hostile,distance=..20] run function mflux:monster_repulsion
-### Projectile Repulsion Field
-execute as @e[tag=Conduit,scores={flux=1..,age=2}] at @s if block ~ ~-1 ~ diamond_block if entity @e[type=#majik:projectile,distance=..8,nbt=!{inGround:1b}] run function mflux:projectile_repulsion
+### Projectile Repulsion Field - run every frame for more accurate and rapid reflections
+execute as @e[tag=Conduit,scores={flux=1..}] at @s if block ~ ~-1 ~ diamond_block if entity @e[type=#majik:projectile,distance=..7,nbt=!{inGround:1b},tag=!RepulsionFieldCooldown] run function mflux:projectile_repulsion
 ### Sun Altar
 execute as @e[tag=Conduit,scores={flux=..3,age=2}] at @s positioned ~ ~-1 ~ if block ~-1 ~ ~-1 lapis_block if block ~-1 ~ ~ gold_block if block ~-1 ~ ~1 lapis_block if block ~ ~ ~-1 gold_block if block ~ ~ ~ quartz_block if block ~ ~ ~1 gold_block if block ~1 ~ ~-1 lapis_block if block ~1 ~ ~ gold_block if block ~1 ~ ~1 lapis_block positioned ~ ~1 ~ if block ~-1 ~ ~-1 daylight_detector[inverted=false] if block ~-1 ~ ~1 daylight_detector[inverted=false] if block ~1 ~ ~-1 daylight_detector[inverted=false] if block ~1 ~ ~1 daylight_detector[inverted=false] run function mflux:sun_altar
 

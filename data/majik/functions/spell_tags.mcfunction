@@ -75,3 +75,7 @@ tag @e[type=phantom] add CanAge
 tag @e[type=zombified_piglin] add CanAge
 
 scoreboard players add @e[tag=CanAge] age 1
+
+## Repulsion field cooldowns
+scoreboard players remove @e[tag=RepulsionFieldCooldown] xp_old 1
+execute as @e[tag=RepulsionFieldCooldown] if score @s xp_old matches ..0 run tag @s remove RepulsionFieldCooldown

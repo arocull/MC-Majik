@@ -1,7 +1,7 @@
 tag @s add RepulsionField
 
 execute as @e[type=#majik:hostile,distance=..20] at @s run function mflux:repel_entity
-playsound minecraft:block.respawn_anchor.charge ambient @a ~ ~ ~ 0.8 2
+playsound minecraft:block.respawn_anchor.charge ambient @a[distance=..30] ~ ~ ~ 0.5 2 0.05
 particle minecraft:enchanted_hit ~ ~ ~ 10 10 10 0.1 300 normal
 
 scoreboard players add @s xp 1

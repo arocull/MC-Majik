@@ -4,7 +4,6 @@
 		"minecraft:boat",
 		"minecraft:item",
 		"minecraft:lightning_bolt",
-		"minecraft:potion",
 		"minecraft:falling_block",
 		"minecraft:armor_stand",
 		"minecraft:firework_rocket",
@@ -14,7 +13,6 @@
 		"minecraft:area_effect_cloud",
 		"minecraft:experience_orb",
 		"minecraft:experience_bottle",
-		"minecraft:shulker_bullet",
-		"#minecraft:impact_projectiles"
+		"#majik:projectile"
 	]
 }

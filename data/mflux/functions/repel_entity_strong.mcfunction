@@ -21,13 +21,20 @@ scoreboard players operation @s vz1 -= @s vz2
 ## Tilt entity up so knockback is a little more effective
 scoreboard players add @s vy1 50
 
-execute as @s store result entity @s Motion[0] double 0.005 run scoreboard players get @s vx1
-execute as @s store result entity @s Motion[1] double 0.005 run scoreboard players get @s vy1
-execute as @s store result entity @s Motion[2] double 0.005 run scoreboard players get @s vz1
+execute as @s store result entity @s Motion[0] double 0.001 run scoreboard players get @s vx1
+execute as @s store result entity @s Motion[1] double 0.001 run scoreboard players get @s vy1
+execute as @s store result entity @s Motion[2] double 0.001 run scoreboard players get @s vz1
 
-execute if entity @s[type=fireball] store result entity @s power[0] double 0.005 run scoreboard players get @s vx1
-execute if entity @s[type=fireball] store result entity @s power[1] double 0.005 run scoreboard players get @s vx1
-execute if entity @s[type=fireball] store result entity @s power[2] double 0.005 run scoreboard players get @s vx1
+execute if entity @s[type=fireball] store result entity @s direction[0] double 0.002 run scoreboard players get @s vx1
+execute if entity @s[type=fireball] store result entity @s direction[1] double 0.002 run scoreboard players get @s vx1
+execute if entity @s[type=fireball] store result entity @s direction[2] double 0.002 run scoreboard players get @s vx1
+execute if entity @s[type=fireball] store result entity @s power[0] double 0.0005 run scoreboard players get @s vx1
+execute if entity @s[type=fireball] store result entity @s power[1] double 0.0005 run scoreboard players get @s vx1
+execute if entity @s[type=fireball] store result entity @s power[2] double 0.0005 run scoreboard players get @s vx1
 
-particle minecraft:sweep_attack ~ ~0.1 ~ 0 0 0 0 1 force
-execute at @s run particle minecraft:flash ~ ~ ~ 0 0 0 0 1 force
+## Reflecting particle effect
+particle minecraft:sweep_attack ~ ~0.1 ~ 0 0 0 1 1 force
+
+## Set cooldown so field isn't triggered multiple times
+tag @s[type=!player] add RepulsionFieldCooldown
+scoreboard players set @s[type=!player] xp_old 10

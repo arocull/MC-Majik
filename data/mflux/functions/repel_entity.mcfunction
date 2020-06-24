@@ -27,8 +27,8 @@ scoreboard players operation @s vz1 += @s vz2
 ## Tilt entity up so knockback is a little more effective
 scoreboard players add @s vy1 50
 
-execute as @s store result entity @s Motion[0] double 0.0010 run scoreboard players get @s vx1
-execute as @s store result entity @s Motion[1] double 0.0010 run scoreboard players get @s vy1
-execute as @s store result entity @s Motion[2] double 0.0010 run scoreboard players get @s vz1
+execute as @s store result entity @s Motion[0] double 0.0012 run scoreboard players get @s vx1
+execute as @s store result entity @s Motion[1] double 0.0012 run scoreboard players get @s vy1
+execute as @s store result entity @s Motion[2] double 0.0012 run scoreboard players get @s vz1
 
 particle minecraft:sweep_attack ~ ~ ~ 0 0 0 0 1 force
