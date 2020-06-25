@@ -13,14 +13,10 @@ execute at @e[tag=FireMageBoltNew] as @e[tag=FireMage,sort=nearest,limit=1] at @
 kill @e[tag=FireMageBoltNew]
 
 
-
-
-
+## Perform attacks for other AIs
 execute as @e[tag=FrostMage,scores={age=170..}] at @s if entity @a[gamemode=!creative,gamemode=!spectator,distance=..15] facing entity @a[gamemode=!creative,gamemode=!spectator,distance=..15,sort=nearest,limit=1] feet facing ^ ^.25 ^100 run function enemy:frostmage_frost_beam
 execute as @e[tag=ZombieKnight,scores={age=150..}] at @s if entity @a[gamemode=!creative,gamemode=!spectator,distance=..8] run function enemy:zombie_knight_lightning_shield
 execute as @e[tag=Firetail,scores={age=200..}] at @s if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function enemy:firetail_firebomb
-
-
 
 ## Blink + Lightning spell, perhaps stick it to an enderman or shulker?
 #tag @e[tag=FireMageBoltNew] add FireMageBolt

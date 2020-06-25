@@ -1,2 +1,2 @@
-summon spider ~ ~1 ~ {Passengers:[{id:"minecraft:wither_skeleton",HandItems:[{id:"minecraft:bow",Count:1b},{id:"minecraft:blaze_rod",Count:1b}],HandDropChances:[0.01f,1.0f],ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1b}],Tags:["FireMage","CanAge"]}],Tags:["FireMageMount","CanAge"]}
+summon spider ~ ~1 ~ {Passengers:[{id:"minecraft:wither_skeleton",HandItems:[{id:"minecraft:bow",Count:1b},{id:"minecraft:blaze_rod",Count:1b}],HandDropChances:[0.01f,1.0f],ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1b}],Tags:["FireMage","CanAge","MajikSpecialMonster"]}],Tags:["FireMageMount","CanAge","MajikSpecialMonster"]}
 effect give @e[tag=FireMageMount] minecraft:fire_resistance 9000 0 true

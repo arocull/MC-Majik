@@ -1,3 +1,8 @@
+## Lodestone enemy tracker
+
+execute as @e[type=item,nbt={Item:{id:"minecraft:compass",Count:1b,tag:{MajikTrackingCompass:1b}},OnGround:1b}] at @s run function majik:place_tracking_compass
+execute as @e[tag=MajikMonsterTracker] at @s run function majik:tracking_compass
+
 ## Then cast spells--only cast if player has paper and is holding a wand
 execute as @a at @s if entity @s[nbt={Inventory:[{id:"minecraft:paper"}]},nbt={SelectedItem:{tag:{IsWand:1b,Enchantments:[{id:"minecraft:channeling"}]}}}] if score @s clicks matches 1.. run function majik:cast_spells
 scoreboard players set @a clicks 0
