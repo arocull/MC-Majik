@@ -15,10 +15,13 @@ execute as @e[tag=MakeConduit] at @s align xyz positioned ~.5 ~ ~.5 run function
 execute as @e[tag=Conduit] at @s if block ~ ~-1 ~ lapis_block if entity @p[gamemode=!spectator,distance=..3] run particle end_rod ~ ~ ~ 0.55 0.05 0.55 0 3 normal
 execute as @e[tag=Conduit,scores={age=2}] at @s if block ~ ~-1 ~ lapis_block as @a[scores={mana=1..},distance=..1.1,sort=nearest,limit=1] run function mflux:transduct_mana
 
-
-
 ## Transfer power
 execute as @e[tag=Conduit,scores={flux=1..}] at @s at @e[tag=Conduit,sort=random,distance=1..8,limit=1] if score @s flux > @e[tag=Conduit,sort=nearest,limit=1] flux run function mflux:transfer_flux
+
+## Dump mana if player is present or if system is overflowing (done after power-transfer to allow dumping of over-charged conduits)
+execute as @e[tag=Conduit,scores={flux=1..}] at @s if block ~ ~-1 ~ chiseled_polished_blackstone if entity @p[gamemode=!spectator,distance=..3] run particle minecraft:witch ~ ~ ~ 0.55 0.05 0.55 0 3 normal
+execute as @e[tag=Conduit,scores={age=2,flux=1..}] at @s if block ~ ~-1 ~ chiseled_polished_blackstone if entity @a[distance=..1.1] run function mflux:expel_mana
+execute as @e[tag=Conduit,scores={flux=6..}] at @s if block ~ ~-1 ~ chiseled_polished_blackstone run function mflux:expel_mana
 
 
 ## Tick Ambient Sounds
