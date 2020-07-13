@@ -36,7 +36,7 @@ tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["nature"]
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["earth"]}}}] add spell_earth
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["wind"]}}}] add spell_wind
 
-## Dualcasting--get NBT data from wand in offhand, still requires a spell be in the main hand to cast, however
+## Dualcasting--get NBT data from wand in offhand, still requires a spell to be in the main hand to cast, however
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["point"]}}]}] add spell_shape_point
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["projectile"]}}]}] add spell_shape_projectile
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["beam"]}}]}] add spell_shape_beam
@@ -73,6 +73,7 @@ tag @e[type=zombie] add CanAge
 tag @e[type=#minecraft:skeletons] add CanAge
 tag @e[type=phantom] add CanAge
 tag @e[type=zombified_piglin] add CanAge
+tag @e[type=squid] add CanAge
 
 scoreboard players add @e[tag=CanAge] age 1
 

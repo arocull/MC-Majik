@@ -1,0 +1,1 @@
+execute at @e[tag=EnderTeleport,sort=random,limit=1] run tp @s ^ ^1 ^3
