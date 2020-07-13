@@ -20,9 +20,14 @@ execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run summo
 execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run scoreboard players add @s xp 2
 execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run xp add @s -3
 
-execute if entity @s[tag=spell_nature] if score @s mana matches 2.. as @e[tag=hit_bound_weapon,distance=..2] run function spells:self_nature
-execute if entity @s[tag=spell_nature] if score @s mana matches 2.. run scoreboard players add @s xp 1
-execute if entity @s[tag=spell_nature] if score @s mana matches 2.. run xp add @s -2
+execute if entity @s[tag=spell_nature] if score @s mana matches 2.. if entity @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run tag @s add MajikLifestealHit
+execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. at @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run particle minecraft:enchanted_hit ~ ~0.5 ~ 0.25 0.5 0.25 1 100 normal
+execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. at @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run playsound minecraft:entity.zombie_villager.cure player @a ~ ~ ~ 0.5 1.9
+execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. as @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run effect give @s instant_health 1 0 true
+execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. at @s run function spells:self_nature
+execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. run scoreboard players add @s xp 1
+execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. run xp add @s -2
+tag @a[tag=MajikLifestealHit] remove MajikLifestealHit
 
 execute if entity @s[tag=spell_ender] if score @s mana matches 2.. as @e[tag=hit_bound_weapon,distance=..2] run function spells:projectile_ender_collide
 execute if entity @s[tag=spell_ender] if score @s mana matches 2.. run scoreboard players add @s xp 1
