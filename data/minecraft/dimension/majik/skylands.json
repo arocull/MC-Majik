@@ -1,0 +1,173 @@
+{
+      "generator": {
+        "type": "minecraft:noise",
+        "seed": 1203610,
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "seed": 1230151,
+          "biomes": [
+            {
+              "biome": "minecraft:flower_forest",
+              "parameters": {
+                "altitude": 0.8,
+                "weirdness": 0.1,
+                "offset": 0,
+                "temperature": 0.2,
+                "humidity": 0.2
+              }
+            },
+            {
+              "biome": "minecraft:dark_forest_hills",
+              "parameters": {
+                "altitude": 0.4,
+                "weirdness": 0.5,
+                "offset": 0,
+                "temperature": 0.2,
+                "humidity": 0.3
+              }
+            },
+            {
+              "biome": "minecraft:wooded_hills",
+              "parameters": {
+                "altitude": 0.5,
+                "weirdness": 0.4,
+                "offset": 0,
+                "temperature": 0.4,
+                "humidity": 0.2
+              }
+            }
+          ]
+        },
+        "settings": {
+          "bedrock_roof_position": -10,
+          "bedrock_floor_position": -10,
+          "sea_level": 1,
+          "disable_mob_generation": false,
+          "default_block": {
+            "Name": "minecraft:stone",
+            "Properties": {}
+          },
+          "default_fluid": {
+            "Name": "minecraft:air",
+            "Properties": {}
+          },
+          "noise": {
+            "density_factor": 0.015,
+            "density_offset": -0.05,
+            "simplex_surface_noise": true,
+            "random_density_offset": true,
+            "island_noise_override": false,
+            "amplified": false,
+            "size_horizontal": 2,
+            "size_vertical": 2,
+            "height": 128,
+            "sampling": {
+              "xz_scale": 1,
+              "y_scale": 3,
+              "xz_factor": 80,
+              "y_factor": 160
+            },
+            "bottom_slide": {
+              "target": -50,
+              "size": 1,
+              "offset": 0
+            },
+            "top_slide": {
+              "target": -50,
+              "size": 3,
+              "offset": 1
+            }
+          },
+          "structures": {
+            "structures": {
+              "minecraft:jungle_pyramid": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:endcity": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:village": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:ruined_portal": {
+                "spacing": 40,
+                "separation": 30,
+                "salt": 34222645
+              },
+              "minecraft:igloo": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:stronghold": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:bastion_remnant": {
+                "spacing": 64,
+                "separation": 30,
+                "salt": 30084232
+              },
+              "minecraft:desert_pyramid": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:nether_fossil": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:mansion": {
+                "spacing": 80,
+                "separation": 20,
+                "salt": 10387319
+              },
+              "minecraft:shipwreck": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:monument": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:swamp_hut": {
+                "spacing": 32,
+                "separation": 8,
+                "salt": 14357620
+              },
+              "minecraft:fortress": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:pillager_outpost": {
+                "spacing": 32,
+                "separation": 8,
+                "salt": 165745296
+              },
+              "minecraft:ocean_ruin": {
+                "spacing": 1,
+                "separation": 0,
+                "salt": 0
+              },
+              "minecraft:mineshaft": {
+                "spacing": 64,
+                "separation": 50,
+                "salt": 12309510
+              }
+            }
+          }
+        }
+      },
+      "type": "minecraft:overworld"
+}
