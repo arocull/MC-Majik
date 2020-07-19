@@ -29,6 +29,8 @@ I use a couple of plugins to help me tell what all is going on inside the datapa
 - [Minecraft JSON Schemas](https://marketplace.visualstudio.com/items?itemName=Levertion.mcjson) by Levertion
 -- Helps organize .mcmeta files for function tagging, datapack info, and other things
 
+There are also some good examples on custom worldgen, as seen [here](https://gist.github.com/RainWarrior/2c32848aad78910a3ca148b82c91f7c2).
+
 ## Mechanics
 Again, most mechanics are explained in-depth in [this design document](https://docs.google.com/document/d/1j-iPhK4cPNGycPWhLUA-r3WZAGMvpzdokSlk-_Y4-Z0/edit?usp=sharing).
 

@@ -1,0 +1,1 @@
+summon area_effect_cloud ~ ~ ~ {RadiusPerTick:0.0f,RadiusOnUse:0.0f,Duration:10000,Invulnerable:1,Tags:["MajikStructureGen"]}

@@ -5,6 +5,7 @@
 		
 		"enemy:tick_ai",
 		"mflux:tick_flux",
+		"majik:tick_skylands",
 
 		"majik:bound_weapons",
 		"majik:tick",
