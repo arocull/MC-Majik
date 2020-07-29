@@ -1,18 +1,18 @@
 {
 	"values": [
-		"majik:set_bars",
-		"majik:spell_tags",
+		"majik:config/set_bars",
+		"majik:spells/spell_tags",
 		
-		"enemy:tick_ai",
-		"mflux:tick_flux",
-		"majik:tick_skylands",
+		"majik:enemy/tick_ai",
+		"majik:flux/tick_flux",
+		"majik:skylands/tick_skylands",
 
-		"majik:bound_weapons",
+		"majik:spells/bound_weapons",
 		"majik:tick",
 		
-		"majik:craft_compendium",
-		"majik:craft_helm_of_sensing",
-		"majik:craft_tracking_compass",
-		"majik:craft_spells"
+		"majik:crafting/craft_compendium",
+		"majik:crafting/craft_helm_of_sensing",
+		"majik:crafting/craft_tracking_compass",
+		"majik:crafting/craft_spells_tags"
 	]
 }

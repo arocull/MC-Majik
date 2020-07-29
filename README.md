@@ -15,7 +15,7 @@ Feel free to delete .git and accompanying files to lighten the disk space it tak
 Once you have into your Minecraft world, make sure it's enabled with `/reload` `/datapack enable "file/mc-majik"`
 
 Finally, be sure to run initial setup before anything else, as this will automatically set up scoreboards for players.
-`/function majik:setup`
+`/function majik:config/setup`
 It is best if the setup is run before much progress is made, as the system relies on experience accumulation to tell how much mana player has.
 
 ### Editing
