@@ -1,0 +1,93 @@
+{
+    "generator": {
+      "type": "minecraft:noise",
+      "seed": 123671231,
+      "biome_source": {
+        "type": "minecraft:fixed",
+        "seed": 1235561231,
+        "biome": "minecraft:plains"
+      },
+      "settings": {
+        "bedrock_roof_position": -10,
+        "bedrock_floor_position": -10,
+        "sea_level": 1,
+        "disable_mob_generation": true,
+        "default_block": {
+          "Name": "minecraft:stone",
+          "Properties": {}
+        },
+        "default_fluid": {
+          "Name": "minecraft:air",
+          "Properties": {}
+        },
+        "noise": {
+          "density_factor": 0,
+          "density_offset": -0.46875,
+          "simplex_surface_noise": true,
+          "random_density_offset": true,
+          "island_noise_override": true,
+          "amplified": false,
+          "size_horizontal": 2,
+          "size_vertical": 2,
+          "height": 128,
+          "sampling": {
+            "xz_scale": 1,
+            "y_scale": 1,
+            "xz_factor": 80,
+            "y_factor": 160
+          },
+          "bottom_slide": {
+            "target": -50,
+            "size": 1,
+            "offset": 0
+          },
+          "top_slide": {
+            "target": -50,
+            "size": 3,
+            "offset": 1
+          }
+        },
+        "structures": {
+          "structures": {
+            "minecraft:mineshaft": {
+              "spacing": 64,
+              "separation": 50,
+              "salt": 0
+            },
+            "minecraft:village": {
+              "spacing": 64,
+              "separation": 50,
+              "salt": 12306123
+            },
+            "minecraft:pillager_outpost": {
+                "spacing": 64,
+                "separation": 50,
+                "salt": 0
+            },
+            "minecraft:ruined_portal": {
+                "spacing": 64,
+                "separation": 50,
+                "salt": 0
+            }
+          }
+        }
+      }
+    },
+    "type": {
+      "name": "majik:moonlit_plains",
+      "ultrawarm": false,
+      "natural": false,
+      "shrunk": true,
+      "piglin_safe": false,
+      "respawn_anchor_works": false,
+      "bed_works": false,
+      "has_raids": false,
+      "has_skylight": true,
+      "has_ceiling": false,
+      "ambient_light": 0,
+      "fixed_time": 18000,
+      "logical_height": 256,
+      "infiniburn": "minecraft:infiniburn_overworld"
+    }
+
+}

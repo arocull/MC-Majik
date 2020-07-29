@@ -1,0 +1,1 @@
+execute in majik:moonlit_plain positioned 0 129 0 as @s run function majik:dimensions/moonlit_plains/enter

@@ -1,0 +1,1 @@
+execute in majik:skylands positioned ~ 200 ~ as @s run function majik:dimensions/skylands/enter

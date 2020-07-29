@@ -4,4 +4,4 @@ setblock ~ ~-1 ~ redstone_block replace
 
 kill @e[type=#majik:docile,distance=..1]
 
-function majik:skylands/structure_gen/build_structure_base
+function majik:dimensions/skylands/structure_gen/build_structure_base

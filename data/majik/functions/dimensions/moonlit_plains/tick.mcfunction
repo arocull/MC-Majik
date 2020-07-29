@@ -1,0 +1,2 @@
+# execute in majik:moonlit_plain as @a[predicate=majik:in_moonlit_plains] at @s if predicate majik:random_one_tenth run playsound minecraft:block.stone_pressure_plate.click_on player @s ~ ~ ~ 0.1 0.5
+# execute in majik:moonlit_plain as @a[predicate=majik:in_moonlit_plains] at @s if predicate majik:random_one_tenth run playsound minecraft:block.stone_pressure_plate.click_on player @s ~ ~ ~ 0.1 0.6
