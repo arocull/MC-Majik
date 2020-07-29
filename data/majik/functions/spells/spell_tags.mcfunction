@@ -17,7 +17,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:snowball",tag:{IsMagical:1b}}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:wooden_sword",tag:{IsMagical:1b}}}]
 clear @a snowball{IsMagical:1b}
 clear @a[nbt=!{SelectedItem:{id:"minecraft:wooden_sword",tag:{IsMagical:1b}}}] wooden_sword{IsMagical:1b}
-clear @a[nbt={Inventrory:{id:"minecraft:wooden_sword",Enchantments:[{}]}}] wooden_sword{IsMagical:1b}
+# clear @a[nbt={Inventory:{id:"minecraft:wooden_sword",Enchantments:[{}]}}] wooden_sword{IsMagical:1b}
 tag @a remove hold_projectile
 tag @a remove hold_bound_weapon
 
@@ -69,11 +69,7 @@ effect give @a[tag=RevealMagic] minecraft:night_vision 11 0 true
 
 
 ## Age tagging, age monsters and items
-tag @e[type=zombie] add CanAge
-tag @e[type=#minecraft:skeletons] add CanAge
-tag @e[type=phantom] add CanAge
-tag @e[type=zombified_piglin] add CanAge
-tag @e[type=squid] add CanAge
+tag @e[type=#majik:track_age] add CanAge
 
 scoreboard players add @e[tag=CanAge] age 1
 

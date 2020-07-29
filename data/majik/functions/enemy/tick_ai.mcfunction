@@ -1,7 +1,7 @@
 execute as @e[type=skeleton,scores={age=1},sort=random,limit=1] at @s unless block ~ ~-1 ~ stone unless entity @e[tag=FrostMage,distance=..100] run function majik:enemy/make_frostmage
 execute as @e[type=zombie,scores={age=1},sort=random,limit=1] at @s unless block ~ ~-1 ~ stone unless entity @e[tag=ZombieKnight,distance=..100] run function majik:enemy/make_zombie_knight
 execute unless entity @e[tag=Firetail] as @e[type=phantom,scores={age=1},sort=random,limit=1] at @s run function majik:enemy/make_firetail
-execute in minecraft:the_nether unless entity @e[tag=FireMage] as @e[type=zombified_piglin,scores={age=1},sort=random,limit=1,nbt={Dimension:-1}] at @s run function majik:enemy/make_firemage
+execute in minecraft:the_nether unless entity @e[tag=FireMage,distance=..300] as @e[type=zombified_piglin,scores={age=1},predicate=majik:in_nether,sort=random,limit=1] at @s run function majik:enemy/make_firemage
 execute at @e[type=squid,scores={age=1}] run function majik:enemy/make_endersquid
 
 execute as @e[tag=FrostMage] at @s run particle minecraft:firework ~ ~.05 ~ .3 0 .3 0 1 normal

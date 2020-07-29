@@ -21,6 +21,7 @@ execute as @s if entity @s[tag=spell_shape_beam,tag=spell_earth] run function ma
 execute as @s if entity @s[tag=spell_shape_beam,tag=spell_fire] run function majik:spells/casting/beam_fire_cast
 execute as @s if entity @s[tag=spell_shape_beam,tag=spell_frost] run function majik:spells/casting/beam_frost_cast
 execute as @s if entity @s[tag=spell_shape_beam,tag=spell_lightning] run function majik:spells/casting/beam_lightning_cast
+execute as @s if entity @s[tag=spell_shape_beam,tag=spell_wind] run function majik:spells/casting/beam_wind_cast
 
 
 ## Projectile Spells - First create snowball base
