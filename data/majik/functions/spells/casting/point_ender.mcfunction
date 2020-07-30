@@ -1,6 +1,6 @@
 particle minecraft:smoke ~ ~ ~ 3 3 3 0 500 normal
 ## Teleport anything that isn't the caster or a nonmob
-tag @e[distance=..6,tag=!spell_point_ender,type=!#majik:nonmob,gamemode=!spectator] add EnderTeleport
+tag @e[type=!#majik:nonmob,distance=..6,tag=!spell_point_ender,tag=!BlinkImmune,gamemode=!spectator] add EnderTeleport
 ## And also projectiles because dropping arrows on people might be funny
 tag @e[distance=..6,type=#majik:projectile] add EnderTeleport
 

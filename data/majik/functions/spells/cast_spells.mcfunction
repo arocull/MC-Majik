@@ -1,11 +1,10 @@
 ## Tag paper so we know what it is
 clear @s paper 1
-execute as @s anchored eyes positioned ~ ~1 ~ run summon item ^ ^ ^1 {Item:{id:"minecraft:paper",Count:1b},Tags:["SpellScroll","VectorCalculator"],PickupDelay:20}
+execute as @s anchored eyes positioned ~ ~1 ~ run summon item ^ ^ ^1 {Item:{id:"minecraft:paper",Count:1b},Tags:["SpellScroll","VectorCalculator","throw"],PickupDelay:20}
 execute as @s at @s run function majik:util/vector
-tag @e[tag=SpellScroll] add throw
 
 
-## First-Priority Spells - Spells that should always cast first due to relocation of paper
+## First-Priority Spells - Spells that should always cast first due to relocation of paper and player
 execute as @s if entity @s[tag=spell_shape_beam,tag=spell_ender] run function majik:spells/casting/beam_ender_cast
 
 
@@ -41,6 +40,7 @@ execute as @s if entity @s[tag=spell_shape_point,tag=spell_fire] run function ma
 execute as @s if entity @s[tag=spell_shape_point,tag=spell_frost] run function majik:spells/casting/point_frost_cast
 execute as @s if entity @s[tag=spell_shape_point,tag=spell_lightning] run function majik:spells/casting/point_lightning_cast
 execute as @s if entity @s[tag=spell_shape_point,tag=spell_nature] run function majik:spells/casting/point_nature_cast
+execute as @s if entity @s[tag=spell_shape_point,tag=spell_earth] run function majik:spells/casting/point_earth_cast
 
 
 ## Finally, apply modifications to scroll in case of bound spells

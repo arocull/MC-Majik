@@ -9,7 +9,7 @@ execute at @e[tag=spell_freeze_summoning] run effect give @e[distance=..7] minec
 execute at @e[tag=spell_freeze_summoning] run effect give @e[distance=..7] minecraft:weakness 8 1
 #execute at @e[tag=spell_freeze_summoning] run effect give @a[distance=..7] minecraft:jump_boost 8 128 true
 execute at @e[tag=spell_freeze_summoning] as @e[distance=..7,type=!player] run data modify entity @s Motion set value [0.0,0.0,0.0]
-execute as @e[type=item,tag=spell_smite_summoning] run data modify entity @s PickupDelay set value 0
+execute as @e[type=item,tag=spell_freeze_summoning] run data modify entity @s PickupDelay set value 0
 
 tag @e[tag=spell_freeze_charging,tag=spell_freeze_summoning] remove spell_freeze_charging
 tag @e[tag=spell_freeze_summoning] remove spell_freeze_summoning

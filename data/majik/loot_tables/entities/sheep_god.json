@@ -1,0 +1,83 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:emerald",
+            "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 3.0,
+                    "max": 5.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:experience_bottle",
+            "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 3.0,
+                    "max": 5.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:spectral_arrow",
+            "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 15.0,
+                    "max": 30.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+            ],
+            "weight": 10
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:elytra",
+            "weight": 3
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:book",
+            "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": {
+                    "min": 25.0,
+                    "max": 45.0,
+                    "type": "minecraft:uniform"
+                  }
+                }
+            ],
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  }

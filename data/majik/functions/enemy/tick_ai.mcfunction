@@ -24,6 +24,10 @@ execute as @e[tag=Firetail,scores={age=200..}] at @s if entity @a[gamemode=!crea
 execute as @e[tag=Endersquid,nbt={HurtTime:10s}] at @s run function majik:spells/casting/point_ender
 execute as @e[tag=Endersquid,nbt={HurtTime:9s}] at @s run function majik:spells/casting/point_ender
 
+## Tick sheep boss
+execute as @e[type=sheep,tag=SheepGod] at @s run function majik:enemy/sheep_boss/tick
+## Kill mount if no sheep present, but only if it's not fresh
+execute as @e[type=phantom,tag=SheepGodMount] at @s unless entity @e[type=sheep,tag=SheepGod,distance=..3] unless score @s age matches ..110 run kill @s
 
 ## Blink + Lightning spell, perhaps stick it to an enderman or shulker?
 #tag @e[tag=FireMageBoltNew] add FireMageBolt

@@ -27,5 +27,6 @@ function majik:spells/casting/point_fire
 function majik:spells/casting/point_frost
 function majik:spells/casting/point_lightning
 function majik:spells/casting/point_nature
+execute as @e[type=item,tag=spell_earth_blast_charging] at @s run function majik:spells/casting/point_earth
 
 scoreboard players set * beam_length 0
