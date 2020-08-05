@@ -1,0 +1,33 @@
+{
+    "name": "majik:dungeon/monsters",
+    "fallback": "minecraft:empty",
+    "elements": [
+      {
+        "weight": 50,
+        "element": {
+          "location": "majik:dungeon/monsters/zombie_knight",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      },
+      {
+        "weight": 50,
+        "element": {
+          "location": "majik:dungeon/monsters/frostmage",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      },
+      {
+        "weight": 12,
+        "element": {
+          "location": "majik:dungeon/monsters/firemage",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      }
+    ]
+}

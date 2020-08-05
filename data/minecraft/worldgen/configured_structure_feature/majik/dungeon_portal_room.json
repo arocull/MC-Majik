@@ -1,0 +1,7 @@
+{
+    "config": {
+      "start_pool": "majik:dungeon/portal_room",
+      "size": 1
+    },
+    "type": "minecraft:bastion_remnant"
+}

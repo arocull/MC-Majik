@@ -1,0 +1,24 @@
+{
+  "name": "majik:well/well",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "location": "majik:well/well_broken",
+        "processors": "minecraft:mossify_20_percent",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "majik:well/well",
+        "processors": "minecraft:mossify_20_percent",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+scoreboard players set @s level 0
+execute if block ~ ~-1 ~ sea_lantern if block ~2 ~ ~2 lapis_block if block ~2 ~ ~-2 lapis_block if block ~-2 ~ ~-2 lapis_block if block ~-2 ~ ~2 lapis_block if block ~1 ~ ~2 gold_block if block ~ ~ ~2 gold_block if block ~-1 ~ ~2 gold_block if block ~1 ~ ~-2 gold_block if block ~ ~ ~-2 gold_block if block ~-1 ~ ~-2 gold_block if block ~2 ~ ~1 gold_block if block ~2 ~ ~ gold_block if block ~2 ~ ~-1 gold_block if block ~-2 ~ ~1 gold_block if block ~-2 ~ ~ gold_block if block ~-2 ~ ~-1 gold_block run scoreboard players set @s level 1

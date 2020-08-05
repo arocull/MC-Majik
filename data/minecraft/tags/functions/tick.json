@@ -5,8 +5,7 @@
 		
 		"majik:enemy/tick_ai",
 		"majik:flux/tick_flux",
-		"majik:dimensions/skylands/tick",
-		"majik:dimensions/moonlit_plains/tick",
+		"majik:dim/tick",
 
 		"majik:spells/bound_weapons",
 		"majik:tick",

@@ -1,0 +1,33 @@
+{
+    "name": "majik:dungeon/halls",
+    "fallback": "minecraft:empty",
+    "elements": [
+      {
+        "weight": 2,
+        "element": {
+          "location": "majik:dungeon/halls/hall1",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      },
+      {
+        "weight": 3,
+        "element": {
+          "location": "majik:dungeon/halls/hall2",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      },
+      {
+        "weight": 1,
+        "element": {
+          "location": "majik:dungeon/halls/hall3",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      }
+    ]
+}
