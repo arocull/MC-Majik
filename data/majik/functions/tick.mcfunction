@@ -1,5 +1,7 @@
-## Lodestone enemy tracker
+## Load scoreboard defaults for new players
+execute as @a run function majik:config/load_defaults
 
+## Lodestone enemy tracker
 execute as @e[type=item,nbt={Item:{id:"minecraft:compass",Count:1b,tag:{MajikTrackingCompass:1b}},OnGround:1b}] at @s run function majik:tools/place_tracking_compass
 execute as @e[tag=MajikMonsterTracker] at @s run function majik:tools/tracking_compass
 

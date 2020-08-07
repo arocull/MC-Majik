@@ -12,11 +12,11 @@ The folder these files are inside of is the datapack itself to allow for easy in
 Simply place the parent folder into the `datapacks` folder inside a Minecraft world file and the datapack should be loaded.
 Feel free to delete .git and accompanying files to lighten the disk space it takes if you're making copies (or make a build function if you like).
 
-Once you have into your Minecraft world, make sure it's enabled with `/reload` `/datapack enable "file/mc-majik"`
+Once you have into your Minecraft world, make sure it's enabled with `/reload`, and then `/datapack enable "file/mc-majik"`
 
-Finally, be sure to run initial setup before anything else, as this will automatically set up scoreboards for players.
-`/function majik:config/setup`
-It is best if the setup is run before much progress is made, as the system relies on experience accumulation to tell how much mana player has.
+Setup is performed automatically upon loading in with the datapack. New player data should be initiated automatically.
+
+**Note:** If the datapack is freshly added to an in-progress world, a player must earn at least one experience point before they can cast a spell to help initialize the mana scoreboard.
 
 ### Editing
 I highly reccomend using Visual Studio Code to edit the datapack due to it being lightweight and easily modifiable.

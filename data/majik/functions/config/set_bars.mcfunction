@@ -1,5 +1,5 @@
 execute as @a run scoreboard players operation @s xp_max = @s level
-execute as @a run scoreboard players operation @s xp_max *= base_values xp_max
+execute as @a run scoreboard players operation @s xp_max *= %majik xp_max
 
 bossbar set magic_level visible false
 bossbar set magic_level visible true
