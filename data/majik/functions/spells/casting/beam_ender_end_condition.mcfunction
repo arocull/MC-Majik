@@ -1,4 +1,3 @@
-execute as @s positioned ^ ^ ^1.5 if block ~ ~ ~ fire if score @s beam_length matches ..20 run function majik:spells/casting/beam_ender_end
-execute as @s positioned ^ ^ ^1.5 if block ~ ~ ~ air if score @s beam_length matches ..20 run function majik:spells/casting/beam_ender_end
-execute as @s positioned ^ ^ ^1.5 if block ~ ~ ~ grass if score @s beam_length matches ..20 run function majik:spells/casting/beam_ender_end
-execute as @s positioned ^ ^ ^1.5 if block ~ ~ ~ torch if score @s beam_length matches ..20 run function majik:spells/casting/beam_ender_end
+## Checks to see if block on the other side of a wall is non-solid--if so, teleports the player there and ends the beam
+## Bedrock can never be passed, however (allows creation of ender-proof boxes)
+execute as @s unless block ~ ~ ~ bedrock unless block ^ ^ ^0.5 bedrock unless block ^ ^ ^1 bedrock positioned ^ ^ ^1.5 if block ~ ~ ~ #majik:nonsolid if score @s beam_length matches ..20 run function majik:spells/casting/beam_ender_end

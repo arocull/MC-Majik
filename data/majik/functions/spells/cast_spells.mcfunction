@@ -1,4 +1,5 @@
 ## Tag paper so we know what it is
+tag @s add MajikCasting
 clear @s paper 1
 execute as @s anchored eyes positioned ~ ~1 ~ run summon item ^ ^ ^1 {Item:{id:"minecraft:paper",Count:1b},Tags:["SpellScroll","VectorCalculator","throw"],PickupDelay:20}
 execute as @s at @s run function majik:util/vector
@@ -62,3 +63,4 @@ tag @e[tag=ProjectileSpell] remove ProjectileSpell
 tag @e[tag=ProjectileInitial] remove ProjectileInitial
 tag @e[tag=SpellScrollPassenger] remove SpellScrollPassenger
 tag @e[tag=SpellScroll] remove SpellScroll
+tag @s remove MajikCasting

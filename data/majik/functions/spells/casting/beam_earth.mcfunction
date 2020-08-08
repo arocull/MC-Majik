@@ -8,4 +8,5 @@ playsound minecraft:block.stone.break player @a ~ ~ ~ .1 0.9
 execute as @s positioned ^ ^ ^0.25 unless block ~ ~ ~ #majik:indestructible if score @s beam_length matches ..25 run function majik:spells/casting/beam_earth
 
 execute as @s if score @s beam_length matches 26 run tp @e[tag=SpellScroll,type=item] ~ ~ ~
+execute as @s if block ^ ^ ^0.25 #majik:indestructible run tp @e[tag=SpellScroll,type=item] ~ ~ ~
 execute as @s if score @s beam_length matches 26 run scoreboard players set @s beam_length 50
