@@ -1,5 +1,8 @@
 scoreboard players remove @s majik_aura_timer 1
 
+execute if score @s majik_aura_hs matches ..0 run scoreboard players set @s majik_aura_hs 10
+scoreboard players remove @s majik_aura_hs 1
+
 execute if entity @s[type=item] run data modify entity @s Invulnerable set value 1b
 execute if entity @s[type=item] run data modify entity @s PickupDelay set value -1
 

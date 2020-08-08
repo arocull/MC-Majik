@@ -49,7 +49,7 @@ execute as @s if entity @s[tag=spell_shape_aura,tag=spell_fire] if score @s mana
 execute as @s if entity @s[tag=spell_shape_aura,tag=spell_frost] if score @s mana matches 5.. run function majik:spells/casting/aura_frost_cast
 execute as @s if entity @s[tag=spell_shape_aura,tag=spell_lightning] if score @s mana matches 5.. run function majik:spells/casting/aura_lightning_cast
 execute as @s if entity @s[tag=spell_shape_aura,tag=spell_ender] if score @s mana matches 5.. run function majik:spells/casting/aura_ender_cast
-execute as @s if entity @s[tag=spell_shape_aura,tag=spell_nature] if score @s mana matches 5.. run function majik:spells/casting/aura_nature_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_nature] if score @s mana matches 7.. run function majik:spells/casting/aura_nature_cast
 execute as @s if entity @s[tag=spell_shape_aura,tag=spell_earth] if score @s mana matches 5.. run function majik:spells/casting/aura_earth_cast
 execute as @s if entity @s[tag=spell_shape_aura,tag=spell_wind] if score @s mana matches 5.. run function majik:spells/casting/aura_wind_cast
 

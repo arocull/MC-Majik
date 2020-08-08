@@ -11,6 +11,7 @@ scoreboard objectives add elem_selected dummy "Elements Selected"
 scoreboard objectives add age dummy "Age"
 scoreboard objectives add flux dummy "Magical Flux"
 scoreboard objectives add majik_aura_timer dummy "Aura Timer"
+scoreboard objectives add majik_aura_hs dummy "Aura Half Second Timer"
 
 ## Used for detecting when a spell is cast from the main hand
 scoreboard objectives add clicks minecraft.used:minecraft.carrot_on_a_stick
