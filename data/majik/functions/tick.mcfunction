@@ -31,4 +31,8 @@ function majik:spells/casting/point_lightning
 function majik:spells/casting/point_nature
 execute as @e[type=item,tag=spell_earth_blast_charging] at @s run function majik:spells/casting/point_earth
 
+
+execute as @e[tag=MajikAuraPrep] at @s run function majik:spells/aura_prep_finish
+execute as @e[tag=MajikAura] at @s run function majik:spells/aura_tick
+
 scoreboard players set * beam_length 0

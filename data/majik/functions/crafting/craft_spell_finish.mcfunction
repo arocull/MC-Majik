@@ -14,6 +14,7 @@ execute if entity @s[tag=spell_shape_bound] run data modify entity @s Item.tag.d
 execute if entity @s[tag=spell_shape_projectile] run data modify entity @s Item.tag.display.Lore append value "\"Projectile\""
 execute if entity @s[tag=spell_shape_beam] run data modify entity @s Item.tag.display.Lore append value "\"Beam\""
 execute if entity @s[tag=spell_shape_point] run data modify entity @s Item.tag.display.Lore append value "\"Point\""
+execute if entity @s[tag=spell_shape_aura] run data modify entity @s Item.tag.display.Lore append value "\"Aura\""
 
 data modify entity @s Item.tag.display.Lore append value "\" \""
 
@@ -27,7 +28,7 @@ execute if entity @s[tag=spell_wind] run data modify entity @s Item.tag.display.
 
 
 ## Make sure the spell had some components on it--otherwise, explode violently at this poor research or potential cash grab
-execute if entity @s[tag=!spell_shape_self,tag=!spell_shape_bound,tag=!spell_shape_projectile,tag=!spell_shape_beam,tag=!spell_shape_point] run tag @s add FailedSpellCraft
+execute if entity @s[tag=!spell_shape_self,tag=!spell_shape_bound,tag=!spell_shape_projectile,tag=!spell_shape_beam,tag=!spell_shape_point,tag=!spell_shape_aura] run tag @s add FailedSpellCraft
 execute if entity @s[tag=!spell_fire,tag=!spell_frost,tag=!spell_lightning,tag=!spell_ender,tag=!spell_nature,tag=!spell_earth,tag=!spell_wind] run tag @s add FailedSpellCraft
 
 execute if entity @s[tag=FailedSpellCraft] run function majik:crafting/craft_spell_failed
