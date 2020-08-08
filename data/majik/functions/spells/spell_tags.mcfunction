@@ -15,10 +15,10 @@ tag @a remove spell_wind
 
 ## Remove traces of un-tossed magic snowballs
 kill @e[type=item,nbt={Item:{id:"minecraft:snowball",tag:{IsMagical:1b}}}]
-kill @e[type=item,nbt={Item:{id:"minecraft:wooden_sword",tag:{IsMagical:1b}}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:stone_sword",tag:{IsMagical:1b}}}]
 clear @a snowball{IsMagical:1b}
-clear @a[nbt=!{SelectedItem:{id:"minecraft:wooden_sword",tag:{IsMagical:1b}}}] wooden_sword{IsMagical:1b}
-# clear @a[nbt={Inventory:{id:"minecraft:wooden_sword",Enchantments:[{}]}}] wooden_sword{IsMagical:1b}
+clear @a[nbt=!{SelectedItem:{id:"minecraft:stone_sword",tag:{IsMagical:1b}}}] stone_sword{IsMagical:1b}
+# clear @a[nbt={Inventory:{id:"minecraft:stone_sword",Enchantments:[{}]}}] stone_sword{IsMagical:1b}
 tag @a remove hold_projectile
 tag @a remove hold_bound_weapon
 
