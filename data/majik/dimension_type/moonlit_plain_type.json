@@ -8,8 +8,8 @@
 	"respawn_anchor_works": false,
 	"ultrawarm": false,
 	"natural": false,
-  "shrunk": true,
-  "coordinate_scale": 256.0,
+  	"shrunk": true,
+  	"coordinate_scale": 32.0,
 	"has_skylight": true,
 	"has_ceiling": false,
 	"fixed_time": 18000

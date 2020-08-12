@@ -15,6 +15,6 @@ effect give @e[type=sheep,tag=SheepGod] instant_health 3 100 true
 playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 2 1.5 1
 particle minecraft:flash ~ ~ ~ 0 0 0 0 1 force
 
-summon lightning_bolt ~-10 ~ ~-4
-summon lightning_bolt ~10 ~ ~4
-summon lightning_bolt ~ ~ ~12
+summon lightning_bolt ~-10 100 ~-4
+summon lightning_bolt ~10 100 ~4
+summon lightning_bolt ~ 100 ~12
