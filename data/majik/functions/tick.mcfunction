@@ -1,5 +1,7 @@
-## Lodestone enemy tracker
+## Load scoreboard defaults for new players
+execute as @a run function majik:config/load_defaults
 
+## Lodestone enemy tracker
 execute as @e[type=item,nbt={Item:{id:"minecraft:compass",Count:1b,tag:{MajikTrackingCompass:1b}},OnGround:1b}] at @s run function majik:tools/place_tracking_compass
 execute as @e[tag=MajikMonsterTracker] at @s run function majik:tools/tracking_compass
 
@@ -28,5 +30,9 @@ function majik:spells/casting/point_frost
 function majik:spells/casting/point_lightning
 function majik:spells/casting/point_nature
 execute as @e[type=item,tag=spell_earth_blast_charging] at @s run function majik:spells/casting/point_earth
+
+
+execute as @e[tag=MajikAuraPrep] at @s run function majik:spells/aura_prep_finish
+execute as @e[tag=MajikAura] at @s run function majik:spells/aura_tick
 
 scoreboard players set * beam_length 0

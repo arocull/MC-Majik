@@ -1,4 +1,5 @@
 ## Tag paper so we know what it is
+tag @s add MajikCasting
 clear @s paper 1
 execute as @s anchored eyes positioned ~ ~1 ~ run summon item ^ ^ ^1 {Item:{id:"minecraft:paper",Count:1b},Tags:["SpellScroll","VectorCalculator","throw"],PickupDelay:20}
 execute as @s at @s run function majik:util/vector
@@ -43,6 +44,16 @@ execute as @s if entity @s[tag=spell_shape_point,tag=spell_nature] run function 
 execute as @s if entity @s[tag=spell_shape_point,tag=spell_earth] run function majik:spells/casting/point_earth_cast
 
 
+## Tack on auras--attaches to spell if no self shape, attaches to hit entity if was a bound weapon attack
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_fire] if score @s mana matches 5.. run function majik:spells/casting/aura_fire_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_frost] if score @s mana matches 5.. run function majik:spells/casting/aura_frost_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_lightning] if score @s mana matches 5.. run function majik:spells/casting/aura_lightning_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_ender] if score @s mana matches 5.. run function majik:spells/casting/aura_ender_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_nature] if score @s mana matches 7.. run function majik:spells/casting/aura_nature_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_earth] if score @s mana matches 5.. run function majik:spells/casting/aura_earth_cast
+execute as @s if entity @s[tag=spell_shape_aura,tag=spell_wind] if score @s mana matches 5.. run function majik:spells/casting/aura_wind_cast
+
+
 ## Finally, apply modifications to scroll in case of bound spells
 execute if entity @s[tag=spell_shape_bound,tag=spell_lightning,tag=spell_shape_point] as @e[tag=SpellScroll] run data modify entity @s Invulnerable set value 1b
 execute if entity @s[tag=spell_shape_bound,tag=spell_fire,tag=spell_shape_projectile] as @e[tag=SpellScroll] run data modify entity @s Invulnerable set value 1b
@@ -52,3 +63,4 @@ tag @e[tag=ProjectileSpell] remove ProjectileSpell
 tag @e[tag=ProjectileInitial] remove ProjectileInitial
 tag @e[tag=SpellScrollPassenger] remove SpellScrollPassenger
 tag @e[tag=SpellScroll] remove SpellScroll
+tag @s remove MajikCasting

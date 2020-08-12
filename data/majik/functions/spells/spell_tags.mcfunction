@@ -3,6 +3,7 @@ tag @a remove spell_shape_projectile
 tag @a remove spell_shape_beam
 tag @a remove spell_shape_self
 tag @a remove spell_shape_bound
+tag @a remove spell_shape_aura
 
 tag @a remove spell_fire
 tag @a remove spell_frost
@@ -14,19 +15,20 @@ tag @a remove spell_wind
 
 ## Remove traces of un-tossed magic snowballs
 kill @e[type=item,nbt={Item:{id:"minecraft:snowball",tag:{IsMagical:1b}}}]
-kill @e[type=item,nbt={Item:{id:"minecraft:wooden_sword",tag:{IsMagical:1b}}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:stone_sword",tag:{IsMagical:1b}}}]
 clear @a snowball{IsMagical:1b}
-clear @a[nbt=!{SelectedItem:{id:"minecraft:wooden_sword",tag:{IsMagical:1b}}}] wooden_sword{IsMagical:1b}
-# clear @a[nbt={Inventory:{id:"minecraft:wooden_sword",Enchantments:[{}]}}] wooden_sword{IsMagical:1b}
+clear @a[nbt=!{SelectedItem:{id:"minecraft:stone_sword",tag:{IsMagical:1b}}}] stone_sword{IsMagical:1b}
+# clear @a[nbt={Inventory:{id:"minecraft:stone_sword",Enchantments:[{}]}}] stone_sword{IsMagical:1b}
 tag @a remove hold_projectile
 tag @a remove hold_bound_weapon
 
 
-## Get sepll attributes
+## Get spell attributes
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["point"]}}}] add spell_shape_point
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["projectile"]}}}] add spell_shape_projectile
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["beam"]}}}] add spell_shape_beam
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["self"]}}}] add spell_shape_self
+tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["aura"]}}}] add spell_shape_aura
 
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["fire"]}}}] add spell_fire
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["frost"]}}}] add spell_frost
@@ -42,6 +44,7 @@ tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:[
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["beam"]}}]}] add spell_shape_beam
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["self"]}}]}] add spell_shape_self
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["bound"]}}]}] add spell_shape_bound
+tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["aura"]}}]}] add spell_shape_aura
 
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["fire"]}}]}] add spell_fire
 tag @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",tag:{pages:["frost"]}}]}] add spell_frost

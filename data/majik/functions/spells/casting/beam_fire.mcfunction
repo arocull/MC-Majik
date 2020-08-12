@@ -1,7 +1,7 @@
 scoreboard players add @s beam_length 1
 
 ## Damage player, place fire
-effect give @e[distance=..1] wither 1 100
+effect give @e[distance=..1] wither 2 2
 execute as @e[type=!item,type=!player,distance=..1] run data modify entity @s Fire set value 80
 
 ## Place fire, burn grass away

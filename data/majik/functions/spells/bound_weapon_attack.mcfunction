@@ -1,5 +1,6 @@
 ## First, try to cast whatever was bound to this wand
-execute at @s if entity @s[nbt={Inventory:[{id:"minecraft:paper"}]}] run function majik:cast_spells
+tag @s add MajikBoundWeaponAttack
+execute at @s if entity @s[nbt={Inventory:[{id:"minecraft:paper"}]}] run function majik:spells/cast_spells
 
 ## Take experience from using enchant modifiers like earth and wind
 execute if entity @s[tag=spell_earth] if score @s mana matches 1.. run xp add @s -1
@@ -20,6 +21,7 @@ execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run summo
 execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run scoreboard players add @s xp 2
 execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run xp add @s -3
 
+### Nature - Performs lifesteal if hit undead
 execute if entity @s[tag=spell_nature] if score @s mana matches 2.. if entity @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run tag @s add MajikLifestealHit
 execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. at @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run particle minecraft:enchanted_hit ~ ~0.5 ~ 0.25 0.5 0.25 1 100 normal
 execute if entity @s[tag=spell_nature,tag=MajikLifestealHit] if score @s mana matches 2.. at @e[tag=hit_bound_weapon,distance=..2,type=#majik:undead] run playsound minecraft:entity.zombie_villager.cure player @a ~ ~ ~ 0.5 1.9
@@ -32,3 +34,5 @@ tag @a[tag=MajikLifestealHit] remove MajikLifestealHit
 execute if entity @s[tag=spell_ender] if score @s mana matches 2.. as @e[tag=hit_bound_weapon,distance=..2] run function majik:spells/casting/projectile_ender_collide
 execute if entity @s[tag=spell_ender] if score @s mana matches 2.. run scoreboard players add @s xp 1
 execute if entity @s[tag=spell_ender] if score @s mana matches 2.. run xp add @s -2
+
+tag @s remove MajikBoundWeaponAttack

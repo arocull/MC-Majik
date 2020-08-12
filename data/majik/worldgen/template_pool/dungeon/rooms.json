@@ -1,0 +1,24 @@
+{
+    "name": "majik:dungeon/rooms",
+    "fallback": "minecraft:empty",
+    "elements": [
+      {
+        "weight": 1,
+        "element": {
+          "location": "majik:dungeon/rooms/treasure_room",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      },
+      {
+        "weight": 3,
+        "element": {
+          "location": "majik:dungeon/rooms/lab",
+          "processors": "minecraft:mossify_20_percent",
+          "projection": "rigid",
+          "element_type": "minecraft:single_pool_element"
+        }
+      }
+    ]
+}

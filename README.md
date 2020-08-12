@@ -1,7 +1,7 @@
 # Majik
 Majik is a magic-themed datapack that integrates magical spells, monsters, and phenomena into Minecraft.
 
-The pack version is currently compatible with 1.16, but was largely designed in 1.15.
+The current version of Minecraft this datapack is developed for release 1.16.2.
 This pack is is not backwards compatible due to differences in entity names and NBT format found in different versions.
 
 There is a [design document](https://docs.google.com/document/d/1j-iPhK4cPNGycPWhLUA-r3WZAGMvpzdokSlk-_Y4-Z0/edit?usp=sharing) for it as well, indicating progress and mechanics.
@@ -12,11 +12,11 @@ The folder these files are inside of is the datapack itself to allow for easy in
 Simply place the parent folder into the `datapacks` folder inside a Minecraft world file and the datapack should be loaded.
 Feel free to delete .git and accompanying files to lighten the disk space it takes if you're making copies (or make a build function if you like).
 
-Once you have into your Minecraft world, make sure it's enabled with `/reload` `/datapack enable "file/mc-majik"`
+Once you have into your Minecraft world, make sure it's enabled with `/reload`, and then `/datapack enable "file/mc-majik"`
 
-Finally, be sure to run initial setup before anything else, as this will automatically set up scoreboards for players.
-`/function majik:config/setup`
-It is best if the setup is run before much progress is made, as the system relies on experience accumulation to tell how much mana player has.
+Setup is performed automatically upon loading in with the datapack. New player data should be initiated automatically.
+
+**Note:** If the datapack is freshly added to an in-progress world, a player must earn at least one experience point before they can cast a spell to help initialize the mana scoreboard.
 
 ### Editing
 I highly reccomend using Visual Studio Code to edit the datapack due to it being lightweight and easily modifiable.

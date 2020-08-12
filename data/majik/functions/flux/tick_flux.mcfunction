@@ -1,8 +1,10 @@
-## Detonate overcharged conduits
+## Detonate overcharged conduits--strong detonation on portals
+execute as @e[type=area_effect_cloud,tag=Conduit,scores={flux=7..},tag=BossPortal] at @s run function majik:dim/sky/boss_portal/detonate
 execute at @e[tag=Conduit,scores={flux=7..}] run summon creeper ~ ~ ~ {Fuse:0,ExplosionRadius:2}
 kill @e[tag=Conduit,scores={flux=7..}]
 
 ## Kill conduits where rod was destroyed--only kill AoC clouds in case of mobile conduits
+execute as @e[type=area_effect_cloud,tag=Conduit,tag=BossPortal] at @s unless block ~ ~ ~ end_rod run function majik:dim/sky/boss_portal/detonate
 execute as @e[type=area_effect_cloud,tag=Conduit] at @s unless block ~ ~ ~ end_rod run kill @s
 
 

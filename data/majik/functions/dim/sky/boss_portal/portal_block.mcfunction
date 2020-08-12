@@ -1,0 +1,3 @@
+execute if predicate majik:random_one_third run summon falling_block ~ ~-0.25 ~ {DropItem:0,Invulnerable:1,Time:2,NoGravity:1,HurtEntities:0,BlockState:{Name:"minecraft:blue_concrete"},Tags:["BossPortalBlock"],PersistenceRequired:1b}
+execute if predicate majik:random_one_tenth unless entity @e[type=falling_block,distance=..0.5] run summon falling_block ~ ~-0.25 ~ {DropItem:0,Invulnerable:1,Time:2,NoGravity:1,HurtEntities:0,BlockState:{Name:"minecraft:cyan_concrete"},Tags:["BossPortalBlock"],PersistenceRequired:1b}
+execute unless entity @e[type=falling_block,distance=..0.5] run summon falling_block ~ ~-0.25 ~ {DropItem:0,Invulnerable:1,Time:2,NoGravity:1,HurtEntities:0,BlockState:{Name:"minecraft:purple_concrete"},Tags:["BossPortalBlock"],PersistenceRequired:1b}

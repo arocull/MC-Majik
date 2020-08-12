@@ -34,6 +34,11 @@ execute if entity @s[tag=spell_shape_bound] run scoreboard players add @s xp_max
 execute if entity @s[tag=spell_shape_bound] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:golden_axe"}}] at @s run function majik:crafting/confirm_ingredient
 execute if entity @s[tag=spell_shape_bound] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:slime_ball"}}] at @s run function majik:crafting/confirm_ingredient
 
+execute if entity @s[tag=spell_shape_aura] run scoreboard players add @s xp_max 2
+execute if entity @s[tag=spell_shape_aura] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:repeater"}}] at @s run function majik:crafting/confirm_ingredient
+execute if entity @s[tag=spell_shape_aura] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:light_weighted_pressure_plate"}}] at @s run function majik:crafting/confirm_ingredient
+
+
 
 ## Elements
 execute if entity @s[tag=spell_fire] run scoreboard players add @s xp_max 2

@@ -6,4 +6,6 @@ execute if block ~ ~ ~ snow[layers=3] run setblock ~ ~ ~ snow[layers=4]
 execute if block ~ ~ ~ snow[layers=2] run setblock ~ ~ ~ snow[layers=3]
 execute if block ~ ~ ~ snow[layers=1] run setblock ~ ~ ~ snow[layers=2]
 execute if block ~ ~ ~ air run setblock ~ ~ ~ snow
+execute if block ~ ~ ~ grass run setblock ~ ~ ~ snow
+execute if block ~ ~ ~ fern run setblock ~ ~ ~ snow
 execute if block ~ ~ ~ water run setblock ~ ~ ~ ice
