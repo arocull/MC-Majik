@@ -1,7 +1,7 @@
 # Majik
 Majik is a magic-themed datapack that integrates magical spells, monsters, and phenomena into Minecraft.
 
-The current version of this datapack is developed for snapshot 20w30a.
+The current version of Minecraft this datapack is developed for release 1.16.2.
 This pack is is not backwards compatible due to differences in entity names and NBT format found in different versions.
 
 There is a [design document](https://docs.google.com/document/d/1j-iPhK4cPNGycPWhLUA-r3WZAGMvpzdokSlk-_Y4-Z0/edit?usp=sharing) for it as well, indicating progress and mechanics.
