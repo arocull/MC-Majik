@@ -5,9 +5,9 @@
       "biome_source": {
         "type": "minecraft:fixed",
         "seed": 0,
-        "biome": "majik:vast_plain"
+        "biome": "majik:structure_loader"
       },
       "settings": "majik:moonlit_plain"
     },
-    "type": "majik:moonlit_plain"
+    "type": "majik:moonlit_plain_type"
 }

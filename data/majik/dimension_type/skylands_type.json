@@ -1,8 +1,8 @@
 {
-  "name": "majik:skylands",
   "ultrawarm": false,
   "natural": true,
   "shrunk": false,
+  "coordinate_scale": 1.0,
   "piglin_safe": false,
   "respawn_anchor_works": false,
   "bed_works": true,

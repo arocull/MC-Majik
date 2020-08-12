@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:end_rod"
+    },
+    "title": "More Than Just The End",
+    "description": "Discover a new magical realm of your wildest dreams--and nightmares.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "minecraft:end/find_end_city",
+  "rewards": {
+    "recipes": [
+      "majik:floral_compound"
+    ],
+    "experience": 50
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "from": "minecraft:overworld",
+        "to": "majik:skylands"
+      }
+    }
+  }
+}
