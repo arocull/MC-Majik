@@ -1,7 +1,3 @@
-function majik:dim/sky/boss_portal/check_blocks
-
-#execute if entity @a[distance=..20] run particle minecraft:dragon_breath ~ ~0.5 ~ 0.7 0 0.7 0 25 normal
-
 scoreboard players add @s xp_old 1
 execute if entity @a[distance=..30] run scoreboard players add @s xp_time_shown 1
 

@@ -38,3 +38,7 @@ execute if score @s age matches 2 if block ~ ~-1 ~ emerald_block if entity @e[ty
 
 ### Projectile Repulsion Field - run every frame for more accurate and rapid reflections
 execute if block ~ ~-1 ~ diamond_block if entity @e[type=#majik:projectile,distance=..7,nbt=!{inGround:1b},tag=!RepulsionFieldCooldown] run function majik:flux/projectile_repulsion
+
+
+# Tick passive portals (i.e. sky portal, boss portal is static as it detonates upon destruction and has unique effects)
+function majik:dim/sky/sky_portal/check_blocks

@@ -24,6 +24,11 @@ scoreboard objectives add vx2 dummy
 scoreboard objectives add vy2 dummy
 scoreboard objectives add vz2 dummy
 
+## Used for placement after leaving a portal
+scoreboard objectives add skyPortalX dummy
+scoreboard objectives add skyPortalY dummy
+scoreboard objectives add skyPortalZ dummy
+
 ## Used for boss sheep summoning--default to 15 seconds before boss spawns
 scoreboard objectives add majik_sgboss_st dummy "Sheep God Spawn Timer"
 execute unless score %majik majik_sgboss_st matches -1000..1000000 run scoreboard players set %majik majik_sgboss_st 300
