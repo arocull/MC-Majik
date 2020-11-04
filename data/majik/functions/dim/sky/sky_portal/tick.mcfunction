@@ -5,7 +5,7 @@ execute if score @s xp_old matches 240.. run scoreboard players set @s xp_old 0
 execute if entity @p[distance=..10] run particle portal ~ ~ ~ 1 1 1 0.1 10 normal
 execute if entity @p[distance=..5] run particle end_rod ~ ~ ~ 0.2 0 0.2 0 1 normal
 
-## Store player position outside of teleport range
-execute at @s as @e[type=!#majik:nonmob,distance=3..5,predicate=majik:in_overworld] run function majik:dim/sky/sky_portal/store_position
+## Store player position near teleporter but outside of teleport range, and only in the overworld
+execute at @s as @s[type=!#majik:nonmob,distance=3..5,predicate=majik:in_overworld] run function majik:dim/sky/sky_portal/store_position
 
-execute positioned ~-1 ~ ~-1 at @e[dx=1,dz=1,dy=0,type=!#majik:nonmob] run function majik:dim/sky/sky_portal/teleport
+execute positioned ~-0.5 ~ ~-0.5 at @e[dx=1,dz=1,dy=0,type=!#majik:nonmob] run function majik:dim/sky/sky_portal/teleport

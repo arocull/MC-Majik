@@ -2,6 +2,7 @@
   "type": "majik:moonlit_plain_type",
   "generator": {
     "biome_source": {
+      "seed": 0,
       "type": "minecraft:fixed",
       "biome": "majik:vast_plain"
     },
