@@ -5,10 +5,11 @@ execute as @a run function majik:config/load_defaults
 execute as @e[type=item,nbt={Item:{id:"minecraft:compass",Count:1b,tag:{MajikTrackingCompass:1b}},OnGround:1b}] at @s run function majik:tools/place_tracking_compass
 execute as @e[tag=MajikMonsterTracker] at @s run function majik:tools/tracking_compass
 
-## Then cast spells--only cast if player has paper and is holding a wand
+## Then cast spells--only cast if player has paper and is holding a wand (or if they are just holding a wand and are in creative mode)
 execute as @a at @s if entity @s[nbt={Inventory:[{id:"minecraft:paper"}]},nbt={SelectedItem:{tag:{IsWand:1b,Enchantments:[{id:"minecraft:channeling"}]}}}] if score @s clicks matches 1.. run function majik:spells/cast_spells
+execute as @a at @s if entity @s[gamemode=creative,nbt={SelectedItem:{tag:{IsWand:1b,Enchantments:[{id:"minecraft:channeling"}]}}}] if score @s clicks matches 1.. run function majik:spells/cast_spells
+# Reset clicks (in case player tries to cast spell without meeting requirements)
 scoreboard players set @a clicks 0
-
 
 ## Move projectiles
 execute as @e[tag=projectile_marker,type=armor_stand] at @s run tp @s @e[tag=Projectile,sort=nearest,distance=..5,limit=1]

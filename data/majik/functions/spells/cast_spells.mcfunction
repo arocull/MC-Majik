@@ -64,3 +64,5 @@ tag @e[tag=ProjectileInitial] remove ProjectileInitial
 tag @e[tag=SpellScrollPassenger] remove SpellScrollPassenger
 tag @e[tag=SpellScroll] remove SpellScroll
 tag @s remove MajikCasting
+
+scoreboard players set @s clicks 0
