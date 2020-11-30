@@ -17,7 +17,7 @@ execute if entity @s[tag=spell_fire] if score @s mana matches 1.. run xp add @s 
 execute if entity @s[tag=spell_frost] if score @s mana matches 1.. as @e[tag=hit_bound_weapon,distance=..2] run function majik:effects/freeze
 execute if entity @s[tag=spell_frost] if score @s mana matches 1.. run xp add @s -1
 
-execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run summon lightning_bolt ~ ~ ~
+execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run function majik:effects/lightning
 execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run scoreboard players add @s xp 2
 execute if entity @s[tag=spell_lightning] if score @s mana matches 3.. run xp add @s -3
 

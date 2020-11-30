@@ -1,4 +1,4 @@
-summon lightning_bolt ~ ~ ~
+function majik:effects/lightning
 particle minecraft:end_rod ~ ~1 ~ .25 .5 .25 .1 50 normal
 particle minecraft:end_rod ~ ~.05 ~ .75 .05 .75 0 75 normal
 playsound minecraft:block.beacon.activate ambient @a ~ ~ ~ 1 1

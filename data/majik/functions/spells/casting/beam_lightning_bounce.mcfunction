@@ -1,4 +1,4 @@
-summon minecraft:lightning_bolt ~ ~ ~
+function majik:effects/lightning
 tp @e[tag=SpellScroll,type=item] ~ ~1 ~
 tag @e[type=!#majik:nonmob,distance=..0.1] add MajikChainLightningHit
 
