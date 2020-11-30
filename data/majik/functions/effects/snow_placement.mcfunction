@@ -1,3 +1,9 @@
+# If the snow block is already filled, go ahead and stack snow ontop of it instead
+execute if block ~ ~ ~ powder_snow positioned ~ ~1 ~ run function majik:effects/snow_placement
+
+# If a snow block is filled, convert it to powder snow for a deadly upgrade
+execute if block ~ ~ ~ snow[layers=8] run setblock ~ ~ ~ powder_snow
+
 execute if block ~ ~ ~ snow[layers=7] run setblock ~ ~ ~ snow[layers=8]
 execute if block ~ ~ ~ snow[layers=6] run setblock ~ ~ ~ snow[layers=7]
 execute if block ~ ~ ~ snow[layers=5] run setblock ~ ~ ~ snow[layers=6]

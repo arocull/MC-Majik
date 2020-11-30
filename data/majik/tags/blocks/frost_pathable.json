@@ -3,6 +3,7 @@
 	"values": [
         "#majik:nonsolid",
         "minecraft:snow",
+        "minecraft:powder_snow",
         "minecraft:snow_block",
         "minecraft:ice"
 	]
