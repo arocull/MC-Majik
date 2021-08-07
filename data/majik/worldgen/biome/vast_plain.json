@@ -6,7 +6,7 @@
         {
             "type": "minecraft:bat",
             "weight": 10,
-            "minCount": 8,
+            "minCount": 3,
             "maxCount": 8
         }
     ],

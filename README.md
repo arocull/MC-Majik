@@ -1,7 +1,7 @@
 # Majik
 Majik is a magic-themed datapack that integrates magical spells, monsters, and phenomena into Minecraft.
 
-The current version of Minecraft this datapack is developed for release 1.16.2.
+The current version of Minecraft this datapack is developed for release 1.17.1.
 This pack is is not backwards compatible due to differences in entity names and NBT format found in different versions.
 
 There is a [design document](https://docs.google.com/document/d/1j-iPhK4cPNGycPWhLUA-r3WZAGMvpzdokSlk-_Y4-Z0/edit?usp=sharing) for it as well, indicating progress and mechanics.
@@ -37,3 +37,6 @@ Again, most mechanics are explained in-depth in [this design document](https://d
 [Here](https://youtu.be/C57bnuo85qg) is a video explaining the very basics of spell crafting and casting.
 
 Magical flux and some of its uses are explained [here](https://youtu.be/Q1WIZRJ2aM0).
+
+## Known Bugs
+Currently, lava will spawn between y=1 and y=10 in Majik's customly generated worlds. This cannot be resolved until 1.18.
