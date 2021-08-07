@@ -1,6 +1,7 @@
 ## First, try to cast whatever was bound to this wand
 tag @s add MajikBoundWeaponAttack
 execute at @s if entity @s[nbt={Inventory:[{id:"minecraft:paper"}]}] run function majik:spells/cast_spells
+stopsound @s * entity.item.break
 
 ## Take experience from using enchant modifiers like earth and wind
 execute if entity @s[tag=spell_earth] if score @s mana matches 1.. run xp add @s -1

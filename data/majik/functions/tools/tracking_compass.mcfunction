@@ -41,4 +41,4 @@ tag @e[tag=CompassTracking] remove CompassTracking
 
 ## Kill item if player comes close and hand item to them
 execute if entity @p[distance=..1] run kill @s
-execute if entity @p[distance=..1] run give @p[distance=..1] compass{MajikTrackingCompass:1b,LodestoneDimension:"majik:null",LodestoneTracked:0b,display:{Name:'{"text":"Tracking Compass","italic":"false","color":"yellow"}',Lore:['{"text":"Senses strong magical presences."}','{"text":"Toss onto ground to locate nearby monsters."}']}}
+execute if entity @p[distance=..1] run give @p[distance=..1] compass{MajikTrackingCompass:1b,LodestoneDimension:"majik:null",LodestoneTracked:0b,display:{Name:'{"text":"Tracking Compass","italic":false,"color":"yellow"}',Lore:['{"text":"Senses strong magical presences."}','{"text":"Toss onto ground to locate nearby monsters."}']}}

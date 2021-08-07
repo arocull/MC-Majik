@@ -24,6 +24,7 @@ tag @a remove hold_bound_weapon
 
 
 ## Get spell attributes
+# It doesn't matter if this is the NBT format that's preferred, what matters is that the format matches that of craft_spells.mcfunction
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["point"]}}}] add spell_shape_point
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["projectile"]}}}] add spell_shape_projectile
 tag @a[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{pages:["beam"]}}}] add spell_shape_beam

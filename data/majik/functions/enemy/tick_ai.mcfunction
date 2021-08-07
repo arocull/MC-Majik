@@ -30,7 +30,3 @@ execute as @e[type=sheep,tag=SheepGod] at @s run function majik:enemy/sheep_boss
 execute as @e[type=phantom,tag=SheepGodMount] at @s unless entity @e[type=sheep,tag=SheepGod,distance=..3] unless score @s age matches ..110 run kill @s
 
 ## Blink + Lightning spell, perhaps stick it to an enderman or shulker?
-#tag @e[tag=FireMageBoltNew] add FireMageBolt
-#tag @e[tag=FireMageBoltNew] add Projectile
-#execute at @e[tag=FireMageBoltNew] run summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,Small:1,Marker:1,NoGravity:1,Tags:["projectile_marker","spell_projectile_ender"],Passengers:[{id:"minecraft:item",Invulnerable:1b,Item:{id:"minecraft:paper",Count:1b},PickupDelay:-1,Tags:["spell_smite_charging"]}]}
-#tag @e[tag=FireMageBoltNew] remove FireMageBoltNew
