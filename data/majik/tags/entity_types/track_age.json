@@ -5,6 +5,7 @@
         "#minecraft:skeletons",
         "minecraft:phantom",
         "minecraft:zombified_piglin",
-        "minecraft:squid"
+        "minecraft:squid",
+        "minecraft:creeper"
 	]
 }
