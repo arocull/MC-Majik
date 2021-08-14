@@ -34,7 +34,9 @@ execute if entity @a[tag=RevealMagic] as @e[tag=Conduit] run scoreboard players 
 execute if entity @a[tag=RevealMagic] at @a[tag=RevealMagic] as @e[distance=..10,tag=Conduit,scores={flux=1..}] at @s positioned ~ ~1.5 ~ run function majik:flux/list_flux
 ### Once again, filters type to Area effect Cloud for potential optimization, but can be removed if wanting mobile conduits
 execute if entity @a[tag=RevealMagic] at @a[tag=RevealMagic] as @e[type=area_effect_cloud,distance=..20,tag=Conduit,scores={age=2}] at @s facing entity @e[type=area_effect_cloud,tag=Conduit,distance=0.5..8] feet run function majik:flux/show_connection
-execute at @a[tag=RevealMagic] as @e[distance=..10,tag=Conduit,scores={flux=1..}] at @s if block ~ ~-1 ~ glass positioned ~ ~1.5 ~ run particle minecraft:instant_effect ~ ~ ~ 3.5 1 3.5 0 3 normal
+
+## Show clairvoyance fields
+execute at @a[tag=RevealMagic] as @e[distance=..20,tag=Conduit,scores={flux=1..}] at @s if block ~ ~-1 ~ glass positioned ~ ~1.5 ~ run particle minecraft:instant_effect ~ ~ ~ 3.5 3.5 3.5 0 5 normal
 
 execute as @e[type=area_effect_cloud,tag=Conduit,scores={age=2..}] run scoreboard players set @s age 0
 execute as @e[type=area_effect_cloud,tag=Conduit] run data modify entity @s Age set value 0

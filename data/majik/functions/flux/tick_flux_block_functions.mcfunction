@@ -11,8 +11,8 @@ execute if score @s flux matches 6.. at @s if block ~ ~-1 ~ chiseled_polished_bl
 # Tick ambient block sounds
 scoreboard players add @s xp_old 1
 
-execute if score @s xp_old matches 240.. if block ~ ~-1 ~ emerald_block run playsound minecraft:block.beacon.ambient ambient @a[distance=..30] ~ ~ ~ 1 0.8 0.5
-execute if score @s xp_old matches 10 if block ~ ~-1 ~ diamond_block run playsound minecraft:block.beacon.ambient ambient @a[distance=..20] ~ ~ ~ 0.7 1.5 0.1
+execute if score @s xp_old matches 240.. if block ~ ~-1 ~ emerald_block run playsound minecraft:block.beacon.ambient ambient @a[distance=..30] ~ ~ ~ 1 0.8 0.01
+execute if score @s xp_old matches 10 if block ~ ~-1 ~ diamond_block run playsound minecraft:block.beacon.ambient ambient @a[distance=..20] ~ ~ ~ 0.7 1.5 0.01
 
 execute if score @s xp_old matches 240.. run scoreboard players set @s xp_old 0
 
@@ -23,7 +23,7 @@ execute if score @s xp_old matches 240.. run scoreboard players set @s xp_old 0
 execute as @e[tag=Conduit,scores={flux=1..}] if block ~ ~-1 ~ furnace{Items:[{Slot:0b}],BurnTime:0s} run function majik:flux/fuel_furnace
 
 ### Hopper Funnels
-execute if score @s age matches 2 if block ~ ~-1 ~ hopper if entity @e[type=item,distance=0.4..3,nbt={OnGround:1b}] run function majik:flux/funnel_items
+execute if score @s age matches 2 if block ~ ~-1 ~ hopper if entity @e[type=item,distance=0.4..4,nbt={OnGround:1b}] run function majik:flux/funnel_items
 
 ### Clairvoyance / Seeing Glass
 execute if score @s age matches 2 if block ~ ~-1 ~ glass run function majik:flux/clairvoyance
@@ -36,8 +36,8 @@ execute if block ~ ~-1 ~ gold_block positioned ~-2.5 ~ ~-2.5 if entity @p[dx=4,d
 ### Monster Repulsion Field
 execute if score @s age matches 2 if block ~ ~-1 ~ emerald_block if entity @e[type=#majik:hostile,distance=..20] run function majik:flux/monster_repulsion
 
-### Projectile Repulsion Field - run every frame for more accurate and rapid reflections
-execute if block ~ ~-1 ~ diamond_block if entity @e[type=#majik:projectile,distance=..7,nbt=!{inGround:1b},tag=!RepulsionFieldCooldown] run function majik:flux/projectile_repulsion
+### Projectile Repulsion Field - run every frame for more accurate and rapid reflections, ignore grounded projectiles
+execute if block ~ ~-1 ~ diamond_block if entity @e[type=#majik:projectile,distance=..7.5,nbt=!{inGround:1b},tag=!RepulsionFieldCooldown] run function majik:flux/projectile_repulsion
 
 
 # Tick passive portals (i.e. sky portal, boss portal is static as it detonates upon destruction and has unique effects)

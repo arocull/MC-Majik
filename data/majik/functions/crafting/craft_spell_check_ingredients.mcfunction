@@ -86,9 +86,9 @@ execute if entity @s[tag=spell_earth,tag=spell_level_two] as @e[sort=nearest,lim
 
 execute if entity @s[tag=spell_wind] run scoreboard players add @s xp_max 3
 execute if entity @s[tag=spell_wind,tag=spell_level_two] run scoreboard players add @s xp_max 2
-execute if entity @s[tag=spell_wind] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:glistering_melon_slice"}}] at @s run function majik:crafting/confirm_ingredient
-execute if entity @s[tag=spell_wind] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:poppy"}}] at @s run function majik:crafting/confirm_ingredient
-execute if entity @s[tag=spell_wind] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:cactus"}}] at @s run function majik:crafting/confirm_ingredient
+execute if entity @s[tag=spell_wind] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:sugar"}}] at @s run function majik:crafting/confirm_ingredient
+execute if entity @s[tag=spell_wind] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:cornflower"}}] at @s run function majik:crafting/confirm_ingredient
+execute if entity @s[tag=spell_wind] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:feather"}}] at @s run function majik:crafting/confirm_ingredient
 execute if entity @s[tag=spell_wind,tag=spell_level_two] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:paper"}}] at @s run function majik:crafting/confirm_ingredient
 execute if entity @s[tag=spell_wind,tag=spell_level_two] as @e[sort=nearest,limit=1,tag=SpellIngredientEligible,nbt={Item:{id:"minecraft:gold_ingot"}}] at @s run function majik:crafting/confirm_ingredient
 

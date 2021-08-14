@@ -31,4 +31,4 @@ execute as @s store result entity @s Motion[0] double 0.0012 run scoreboard play
 execute as @s store result entity @s Motion[1] double 0.0012 run scoreboard players get @s vy1
 execute as @s store result entity @s Motion[2] double 0.0012 run scoreboard players get @s vz1
 
-particle minecraft:sweep_attack ~ ~ ~ 0 0 0 0 1 force
+particle minecraft:sweep_attack ~ ~.1 ~ 0 0 0 0 1 force

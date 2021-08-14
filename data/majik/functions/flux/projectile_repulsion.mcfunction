@@ -1,6 +1,6 @@
 tag @s add RepulsionField
 
-execute as @e[type=#majik:projectile,distance=..7,tag=!ReplusionFieldCooldown] at @s run function majik:flux/repel_entity_strong
+execute as @e[type=#majik:projectile,distance=..7.5,tag=!ReplusionFieldCooldown] at @s run function majik:flux/repel_entity_strong
 playsound minecraft:entity.blaze.hurt ambient @a ~ ~ ~ 0.5 1.3
 particle minecraft:soul_fire_flame ~ ~ ~ 2 2 2 0 100 normal
 

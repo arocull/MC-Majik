@@ -1,4 +1,4 @@
-effect give @s glowing 15
+effect give @s glowing 15 0 false
 execute if entity @s[nbt={ActiveEffects:[{Id:24b,ShowParticles:1b}]}] run tag @s add Clairvoyance
 
 execute if entity @s[tag=Clairvoyance] run playsound minecraft:entity.experience_orb.pickup neutral @a ~ ~ ~ 0.05 0.8
