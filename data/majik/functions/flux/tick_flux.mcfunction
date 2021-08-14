@@ -26,9 +26,9 @@ execute as @e[type=area_effect_cloud,tag=Conduit,scores={flux=..3,age=2}] at @s 
 
 
 ## Visuals
-execute at @e[tag=Conduit,scores={flux=1..,age=2}] run particle flame ~ ~1.25 ~ 0 0 0 0 1 force
-execute at @e[tag=Conduit,scores={flux=5..}] run particle smoke ~ ~1.25 ~ 0.05 0.05 0.05 0.05 5 normal
-execute at @e[tag=Conduit,scores={flux=..0,age=2}] run particle smoke ~ ~1.25 ~ 0 0 0 0 1 force
+execute at @e[type=area_effect_cloud,tag=Conduit,scores={flux=1..,age=2}] run particle flame ~ ~1.25 ~ 0 0 0 0 1 force
+execute at @e[type=area_effect_cloud,tag=Conduit,scores={flux=5..}] run particle smoke ~ ~1.25 ~ 0.05 0.05 0.05 0.05 3 normal
+execute at @e[type=area_effect_cloud,tag=Conduit,scores={flux=..0,age=2}] run particle smoke ~ ~1.25 ~ 0 0 0 0 1 force
 
 execute if entity @a[tag=RevealMagic] as @e[tag=Conduit] run scoreboard players operation @s beam_length = @s flux
 execute if entity @a[tag=RevealMagic] at @a[tag=RevealMagic] as @e[distance=..10,tag=Conduit,scores={flux=1..}] at @s positioned ~ ~1.5 ~ run function majik:flux/list_flux
@@ -36,5 +36,5 @@ execute if entity @a[tag=RevealMagic] at @a[tag=RevealMagic] as @e[distance=..10
 execute if entity @a[tag=RevealMagic] at @a[tag=RevealMagic] as @e[type=area_effect_cloud,distance=..20,tag=Conduit,scores={age=2}] at @s facing entity @e[type=area_effect_cloud,tag=Conduit,distance=0.5..8] feet run function majik:flux/show_connection
 execute at @a[tag=RevealMagic] as @e[distance=..10,tag=Conduit,scores={flux=1..}] at @s if block ~ ~-1 ~ glass positioned ~ ~1.5 ~ run particle minecraft:instant_effect ~ ~ ~ 3.5 1 3.5 0 3 normal
 
-execute as @e[tag=Conduit,scores={age=2..}] run scoreboard players set @s age 0
+execute as @e[type=area_effect_cloud,tag=Conduit,scores={age=2..}] run scoreboard players set @s age 0
 execute as @e[type=area_effect_cloud,tag=Conduit] run data modify entity @s Age set value 0

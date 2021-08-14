@@ -1,4 +1,4 @@
-execute unless block ~1 ~ ~1 daylight_detector[power=1] unless block ~1 ~ ~1 daylight_detector[power=0] run particle minecraft:dripping_lava ~ ~0.25 ~ 0.5 0.1 0.5 0 1 normal
+execute unless block ~1 ~ ~1 daylight_detector[power=1] unless block ~1 ~ ~1 daylight_detector[power=0] run particle minecraft:falling_lava ~ ~0.5 ~ 0.8 0.25 0.8 0 1 normal
 
 execute if block ~1 ~ ~1 daylight_detector[power=15] run scoreboard players add @s xp 5
 execute if block ~1 ~ ~1 daylight_detector[power=14] run scoreboard players add @s xp 4
