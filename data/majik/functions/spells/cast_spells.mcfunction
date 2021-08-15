@@ -14,6 +14,7 @@ execute as @s if entity @s[tag=spell_shape_self,tag=spell_fire] run function maj
 execute as @s if entity @s[tag=spell_shape_self,tag=spell_frost] run function majik:spells/casting/self_frost_cast
 execute as @s if entity @s[tag=spell_shape_self,tag=spell_lightning] run function majik:spells/casting/self_lightning_cast
 execute as @s if entity @s[tag=spell_shape_self,tag=spell_nature] run function majik:spells/casting/self_nature_cast
+execute as @s if entity @s[tag=spell_shape_self,tag=spell_wind] run function majik:spells/casting/self_wind_cast
 
 
 ## Beam Spells - Execute earth first because it is short and destroys blocks
