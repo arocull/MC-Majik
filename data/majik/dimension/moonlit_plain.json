@@ -1,13 +1,12 @@
 {
   "type": "majik:moonlit_plain_type",
   "generator": {
+    "type": "minecraft:noise",
+    "seed": 0,
+    "settings": "minecraft:end",
     "biome_source": {
-      "seed": 0,
       "type": "minecraft:fixed",
       "biome": "majik:vast_plain"
-    },
-    "type": "minecraft:noise",
-    "settings": "majik:moonlit_plain",
-    "seed": 0
+    }
   }
 }

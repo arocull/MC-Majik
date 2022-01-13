@@ -20,8 +20,8 @@ execute store result entity @e[type=armor_stand,tag=SkyPortalExit,limit=1] Pos[2
 execute in overworld at @e[type=armor_stand,tag=SkyPortalExit,limit=1] run tp @s ~ ~ ~ facing ~ ~10 ~
 # Refund the player's experience if the armor stand was unloaded
 execute unless entity @e[type=armor_stand,tag=SkyPortalExit,limit=1] run tell @s Teleport to overworld failed because the teleport destination failed to load.
-execute unless entity @e[type=armor_stand,tag=SkyPortalExit,limit=1] run xp add @s 3 points
-execute unless entity @e[type=armor_stand,tag=SkyPortalExit,limit=1] run tell @s You have been refunded 3 experience points.
+execute unless entity @e[type=armor_stand,tag=SkyPortalExit,limit=1] run scoreboard players add @s mana 3
+execute unless entity @e[type=armor_stand,tag=SkyPortalExit,limit=1] run tell @s You have been refunded 3 mana.
 
 # Kill armor stand so other people don't accidentally teleport to it
 execute in overworld run kill @e[type=armor_stand,tag=SkyPortalExit]

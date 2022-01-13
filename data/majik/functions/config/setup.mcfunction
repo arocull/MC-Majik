@@ -3,7 +3,8 @@ scoreboard objectives add level dummy "Magic Level"
 scoreboard objectives add xp dummy "Magic Experience"
 scoreboard objectives add xp_max dummy "Required Experience"
 scoreboard players set %majik xp_max 50
-scoreboard objectives add mana xp "Mana"
+scoreboard objectives add mana dummy "Mana"
+scoreboard objectives add mana_cooldown dummy "Mana Cooldown"
 
 ## Spell and mechanic helpers
 scoreboard objectives add beam_length dummy "Beam Length"

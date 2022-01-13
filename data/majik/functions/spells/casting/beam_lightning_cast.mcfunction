@@ -7,6 +7,6 @@ execute if entity @e[tag=spell_beam_lightning] as @e[tag=spell_beam_lightning] r
 execute if entity @e[tag=spell_beam_lightning] positioned ^ ^0.5 ^1 run function majik:spells/casting/beam_lightning
 
 execute if entity @e[tag=spell_beam_lightning] run scoreboard players add @s xp 7
-execute if entity @e[tag=spell_beam_lightning] run xp add @s -6 points
+execute if entity @e[tag=spell_beam_lightning] run scoreboard players remove @s mana 6
 
 execute if entity @e[tag=spell_beam_lightning] as @e[tag=spell_beam_lightning] run tag @s remove spell_beam_lightning

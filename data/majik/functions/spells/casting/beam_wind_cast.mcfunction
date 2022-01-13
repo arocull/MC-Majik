@@ -4,6 +4,6 @@ execute if score @s mana matches 7.. if entity @e[tag=spell_beam_wind] as @s at 
 scoreboard players set @s beam_length 0
 
 execute if score @s mana matches 7.. if entity @e[tag=spell_beam_wind] run scoreboard players add @s xp 9
-execute if score @s mana matches 7.. if entity @e[tag=spell_beam_wind] run xp add @s -7 points
+execute if score @s mana matches 7.. if entity @e[tag=spell_beam_wind] run scoreboard players remove @s mana 7
 
 execute as @e[tag=spell_beam_wind] run tag @s remove spell_beam_wind

@@ -7,6 +7,6 @@ execute if score @s mana matches 4.. if entity @e[tag=spell_beam_fire] run score
 execute if score @s mana matches 6.. if entity @e[tag=spell_beam_fire] if entity @s[tag=spell_shape_projectile] as @s positioned ~ ~1 ~ positioned ^ ^ ^2 run function majik:spells/casting/beam_fire_fireball
 
 execute if score @s mana matches 4.. if entity @e[tag=spell_beam_fire] run scoreboard players add @s xp 5
-execute if score @s mana matches 4.. if entity @e[tag=spell_beam_fire] run xp add @s -4 points
+execute if score @s mana matches 4.. if entity @e[tag=spell_beam_fire] run scoreboard players remove @s mana 4
 
 execute as @e[tag=spell_beam_fire] run tag @s remove spell_beam_fire

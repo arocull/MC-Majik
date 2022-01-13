@@ -26,7 +26,7 @@ execute as @s if entity @s[tag=spell_shape_beam,tag=spell_wind] run function maj
 
 
 ## Projectile Spells - First create snowball base
-execute as @s if entity @s[tag=spell_shape_projectile,tag=!spell_fire] if entity @e[tag=SpellScroll] if score @s mana matches 2.. unless entity @e[tag=ProjectileSpell] run xp add @s -1
+execute as @s if entity @s[tag=spell_shape_projectile,tag=!spell_fire] if entity @e[tag=SpellScroll] if score @s mana matches 2.. unless entity @e[tag=ProjectileSpell] run scoreboard players remove @s mana 1
 execute as @s if entity @s[tag=spell_shape_projectile,tag=!spell_fire] if entity @e[tag=SpellScroll] if score @s mana matches 1.. unless entity @e[tag=ProjectileSpell] as @s positioned ~ ~1 ~ positioned ^ ^ ^4 run function majik:spells/generate_projectile
 
 execute as @s if entity @s[tag=spell_shape_projectile,tag=spell_fire] run function majik:spells/casting/projectile_fire_cast

@@ -3,3 +3,5 @@ execute unless entity @s[scores={level=-100..}] run scoreboard players set @s le
 execute unless entity @s[scores={xp=-100..}] run scoreboard players set @s xp 0
 execute unless entity @s[scores={xp_old=-100..}] run scoreboard players set @s xp_old 0
 execute unless entity @s[scores={xp_time_shown=-100..}] run scoreboard players set @s xp_time_shown 0
+execute unless entity @s[scores={mana=0..}] run scoreboard players set @s mana 0
+execute unless entity @s[scores={mana_cooldown=-1..}] run scoreboard players set @s mana_cooldown -1

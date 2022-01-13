@@ -1,6 +1,6 @@
 ## Mana cost accounted for outside of spell
 scoreboard players add @s xp 8
-xp add @s -7 points
+scoreboard players remove @s mana 7
 
 ## Apply to item if there is no self shape or bound weapon
 execute unless entity @s[tag=spell_shape_self] unless entity @s[tag=MajikBoundWeaponAttack] as @e[type=item,tag=SpellScroll] at @s run function majik:spells/casting/aura_nature_apply
